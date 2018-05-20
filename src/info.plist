@@ -1,0 +1,387 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>bundleid</key>
+	<string>com.apple.alfred.workflow.recentfolder</string>
+	<key>category</key>
+	<string>Productivity</string>
+	<key>connections</key>
+	<dict>
+		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>674BF8BB-54DF-4982-9BBE-D2D1751B42E6</string>
+				<key>modifiers</key>
+				<integer>524288</integer>
+				<key>modifiersubtext</key>
+				<string>Enter File Actions ...</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A74534B6-0DB6-424E-AA7C-556A35206EF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
+				<key>modifiers</key>
+				<integer>262144</integer>
+				<key>modifiersubtext</key>
+				<string>Share via Dropbox...</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal in Finder....</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+	</dict>
+	<key>createdby</key>
+	<string>Acidham</string>
+	<key>description</key>
+	<string>List recent created files in a Folder</string>
+	<key>disabled</key>
+	<false/>
+	<key>name</key>
+	<string>Recent files in Folder</string>
+	<key>objects</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>script</key>
+				<string>on run
+  set theQuery to "{query}"
+  tell application "Alfred 3" to search theQuery
+end run</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>674BF8BB-54DF-4982-9BBE-D2D1751B42E6</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>fixedorder</key>
+				<false/>
+				<key>items</key>
+				<string>[{"title":"Clutter","arg":"Documents:Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox:Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"}]</string>
+				<key>keyword</key>
+				<string>recent</string>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>subtext</key>
+				<string>Choose Folder or ENTER to choose from a List</string>
+				<key>title</key>
+				<string>Shows recent files in a folder</string>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.listfilter</string>
+			<key>uid</key>
+			<string>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>A74534B6-0DB6-424E-AA7C-556A35206EF0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>68</integer>
+				<key>keyword</key>
+				<string>*listfolder</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string>collecting...</string>
+				<key>script</key>
+				<string>on run	set home to path to home folder	set theFolder to (home as string) &amp; "{query}"	--set theFolder to (home as string) &amp; "Dropbox:Screenshots"	-- get list of files in directory	tell application "Finder"		set theItems to (every file of folder theFolder)		set theItems to sort theItems by modification date		set theItems to reverse of theItems	end tell		-- create XML Output	set xml to "&lt;?xml version=\"1.0\"?&gt;&lt;items&gt;"	repeat with theItem in theItems		-- get file alias		set theFile to (theItem as alias)		-- check if file is visible or not		tell application "System Events" to set isVis to visible of theFile		-- get filename		tell application "Finder" to set theFilename to name of file (theItem as alias)		-- encode file path string for xml 		set theFile to StringReplace(theFile as string, "&amp;", "&amp;amp;")		-- encode filename		set theFilename to StringReplace(theFilename, "&amp;", "&amp;amp;") as string		-- if file is visible then add xml item		if isVis then						-- change icon for non png or jpgs			tell application "Finder"				set the theExt to name extension of theItem			end tell			if theExt is equal to "png" or theExt is equal to "jpg" then				set iconStr to ""			else				set iconStr to " type=\"fileicon\""			end if			-- remove last charater if char is :			if last character of theFile is equal to ":" then set theFile to text 1 thru -2 of theFile												set xml to xml &amp; "&lt;item arg=\"" &amp; (POSIX path of theFile) &amp; "\" valid=\"yes\"&gt;&lt;title&gt;" &amp; theFilename &amp; "&lt;/title&gt;&lt;subtitle&gt;Press ENTER to open...&lt;/subtitle&gt;
+&lt;quicklookurl&gt;" &amp; (POSIX path of theFile) &amp; "&lt;/quicklookurl&gt;&lt;icon" &amp; iconStr &amp; "&gt;" &amp; (POSIX path of theFile) &amp; "&lt;/icon&gt;&lt;/item&gt;"		end if	end repeat		set xml to xml &amp; "&lt;/items&gt;"	return xmlend run(* ==============================================
+FUNCTION: Function to Replace a text within a string
+RETURNS: String 
+==============================================*)on StringReplace(theText, theOldString, theNewString) -- String(String, String, String)	set theCommand to "echo \"" &amp; theText &amp; "\" | sed 's/" &amp; theOldString &amp; "/" &amp; theNewString &amp; "/g'"	--	display dialog theCommand	set theNewText to do shell script theCommand	return theNewTextend StringReplace</string>
+				<key>scriptargtype</key>
+				<integer>0</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>6</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>*drop</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>com.apple.alfred.workflow.drop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
+readonly remote_info_plist="https://raw.githubusercontent.com/Acidham/rsync-folders/master/src/info.plist"
+readonly workflow_url="https://raw.githubusercontent.com/Acidham/rsync-folders/master/RSync%20Folders.alfredworkflow"
+readonly download_type='direct'
+readonly frequency_check='4'
+
+# FROM HERE ON, CODE SHOULD BE LEFT UNTOUCHED!
+function abort {
+  echo "${1}" &gt;&amp;2
+  exit 1
+}
+
+function url_exists {
+  curl --silent --location --output /dev/null --fail --range 0-0 "${1}"
+}
+
+function notification {
+  readonly local notificator="$(find . -type d -name 'Notificator.app')"
+  if [[ -n "${notificator}" ]]; then
+    "${notificator}/Contents/Resources/Scripts/notificator" --message "${1}" --title "${alfred_workflow_name}" --subtitle 'A new version is available'
+    return
+  fi
+
+  readonly local terminal_notifier="$(find . -type f -name 'terminal-notifier')"
+  if [[ -n "${terminal_notifier}" ]]; then
+    "${terminal_notifier}" -title "${alfred_workflow_name}" -subtitle 'A new version is available' -message "${1}"
+    return
+  fi
+
+  osascript -e "display notification \"${1}\" with title \"${alfred_workflow_name}\" subtitle \"A new version is available\""
+}
+
+# Local sanity checks
+readonly local_info_plist='info.plist'
+readonly local_version="$(/usr/libexec/PlistBuddy -c 'print version' "${local_info_plist}")"
+
+[[ -n "${local_version}" ]] || abort 'You need to set a workflow version in the configuration sheet.'
+[[ "${download_type}" =~ ^(direct|page|github_release)$ ]] || abort "'download_type' (${download_type}) needs to be one of 'direct', 'page', or 'github_release'."
+[[ "${frequency_check}" =~ ^[0-9]+$ ]] || abort "'frequency_check' (${frequency_check}) needs to be a number."
+
+# Check for updates
+if [[ $(find "${local_info_plist}" -mtime +"${frequency_check}"d) ]]; then
+  if ! url_exists "${remote_info_plist}"; then abort "'remote_info_plist' (${remote_info_plist}) appears to not be reachable."; fi # Remote sanity check
+
+  readonly tmp_file="$(mktemp)"
+  curl --silent --location --output "${tmp_file}" "${remote_info_plist}"
+  readonly remote_version="$(/usr/libexec/PlistBuddy -c 'print version' "${tmp_file}")"
+
+  if [[ "${local_version}" == "${remote_version}" ]]; then
+    touch "${local_info_plist}" # Reset timer by touching local file
+    exit 0
+  fi
+
+  if [[ "${download_type}" == 'page' ]]; then
+    notification 'Opening download page…'
+    open "${workflow_url}"
+    exit 0
+  fi
+
+  download_url="$([[ "${download_type}" == 'github_release' ]] &amp;&amp; curl --silent "https://api.github.com/repos/${workflow_url}/releases/latest" | grep 'browser_download_url' | head -1 | sed -E 's/.*browser_download_url": "(.*)"/\1/' || echo "${workflow_url}")"
+
+  if url_exists "${download_url}"; then
+    notification 'Downloading and installing…'
+    curl --silent --location --output "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow" "${download_url}"
+    open "${HOME}/Downloads/${alfred_workflow_name}.alfredworkflow"
+  else
+    abort "'workflow_url' (${download_url}) appears to not be reachable."
+  fi
+fi</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>1F941EBB-B459-4BFF-8688-97EF827EDC40</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+	</array>
+	<key>readme</key>
+	<string>Shows recent files in a folder and opens the file, reveal in Finder or share via Dropox (requires WF http://www.packal.org/workflow/drop)
+
+custom folders can be set in List Filter relative to home directory e.g. Desktop or Desktop:somefolder</string>
+	<key>uidata</key>
+	<dict>
+		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
+		<dict>
+			<key>note</key>
+			<string>Configure addtional Folders 
+Must be relative to homefolder e.g. 
+Desktop or Desktop:test</string>
+			<key>xpos</key>
+			<integer>40</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>1F941EBB-B459-4BFF-8688-97EF827EDC40</key>
+		<dict>
+			<key>colorindex</key>
+			<integer>12</integer>
+			<key>note</key>
+			<string>OneUpdater</string>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>480</integer>
+		</dict>
+		<key>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</key>
+		<dict>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>340</integer>
+		</dict>
+		<key>674BF8BB-54DF-4982-9BBE-D2D1751B42E6</key>
+		<dict>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>40</integer>
+		</dict>
+		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>360</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>A74534B6-0DB6-424E-AA7C-556A35206EF0</key>
+		<dict>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>200</integer>
+		</dict>
+		<key>B542D53B-E276-46CD-B6F3-358D5B45DE8C</key>
+		<dict>
+			<key>xpos</key>
+			<integer>610</integer>
+			<key>ypos</key>
+			<integer>490</integer>
+		</dict>
+	</dict>
+	<key>version</key>
+	<string>1.2</string>
+	<key>webaddress</key>
+	<string></string>
+</dict>
+</plist>
