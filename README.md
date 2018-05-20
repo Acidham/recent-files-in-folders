@@ -1,4 +1,4 @@
-# Recent-Riles-In-Folders
+# Recent Files In Folders
 Alfred Workflow to get recent files in folders
 
 
