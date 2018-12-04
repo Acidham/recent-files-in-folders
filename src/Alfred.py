@@ -1,4 +1,5 @@
 import json
+import sys
 """
 Alfred Script Filter generator class
 Version: 0.93
@@ -48,22 +49,22 @@ class Items:
         else:
             return json.dumps(self.item, indent=4)
 
-    def getItems(self, d_type="dict"):
+    def getItems(self, response_type="json"):
         """
         get the final items data for which represents
         the script filter output
-        :param d_type: defines returned data format; "json" if readable "dict" for processing data
+        :param response_type: defines returned data format; "json" if readable "dict" for processing data
         json is required for debugging purpose
         :return: readable JSON or JSON data
         """
         valid_keys = {"json", "dict"}
-        if d_type not in valid_keys:
+        if response_type not in valid_keys:
             raise ValueError("Type must be in: %s" % valid_keys)
         the_items = {}
         the_items.update({"items": self.items})
-        if d_type == "dict":
+        if response_type == "dict":
             return the_items
-        elif d_type == "json":
+        elif response_type == "json":
             return json.dumps(the_items, indent=4)
 
     def setIcon(self, m_path, m_type=""):
@@ -126,6 +127,10 @@ class Items:
         kv = dict_item[key]
         dict_item[key] = kv + value
         self.items[id] = dict_item
+
+    def write(self, response_type='json'):
+        output = self.getItems(response_type=response_type)
+        sys.stdout.write(output)
 
 
 

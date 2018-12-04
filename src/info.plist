@@ -8,11 +8,24 @@
 	<string>Productivity</string>
 	<key>connections</key>
 	<dict>
-		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
+		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
 				<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -121,7 +134,7 @@ end run</string>
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Clutter","arg":"Documents:Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox:Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"}]</string>
+				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"},{"title":"Applications","arg":"\/Applications","subtitle":"Show recent files in Applications"}]</string>
 				<key>keyword</key>
 				<string>recent</string>
 				<key>runningsubtext</key>
@@ -187,15 +200,15 @@ FUNCTION: Function to Replace a text within a string
 RETURNS: String 
 ==============================================*)on StringReplace(theText, theOldString, theNewString) -- String(String, String, String)	set theCommand to "echo \"" &amp; theText &amp; "\" | sed 's/" &amp; theOldString &amp; "/" &amp; theNewString &amp; "/g'"	--	display dialog theCommand	set theNewText to do shell script theCommand	return theNewTextend StringReplace</string>
 				<key>scriptargtype</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>main.py</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>6</integer>
+				<integer>8</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -205,6 +218,24 @@ RETURNS: String
 			<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
 			<key>version</key>
 			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>directory</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -328,15 +359,20 @@ fi</string>
 	<key>readme</key>
 	<string>Shows recent files in a folder and opens the file, reveal in Finder or share via Dropox (requires WF http://www.packal.org/workflow/drop)
 
-custom folders can be set in List Filter relative to home directory e.g. Desktop or Desktop:somefolder</string>
+custom folders can be set in List Filter including path to home directory e.g. Desktop or Desktop:somefolder</string>
 	<key>uidata</key>
 	<dict>
+		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
+		<dict>
+			<key>xpos</key>
+			<integer>240</integer>
+			<key>ypos</key>
+			<integer>230</integer>
+		</dict>
 		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
 		<dict>
 			<key>note</key>
-			<string>Configure addtional Folders 
-Must be relative to homefolder e.g. 
-Desktop or Desktop:test</string>
+			<string>Configure addtional Folders relative or absolute</string>
 			<key>xpos</key>
 			<integer>40</integer>
 			<key>ypos</key>
@@ -390,7 +426,7 @@ Desktop or Desktop:test</string>
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.3</string>
+	<string>2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
