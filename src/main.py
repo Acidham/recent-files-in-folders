@@ -2,10 +2,10 @@
 
 import os
 import sys
-from collections import namedtuple
-import Alfred
 import math
 import time
+from Alfred import Items as Items
+from Alfred import Tools as Tools
 
 
 class RecentFiles:
@@ -60,14 +60,14 @@ class RecentFiles:
         return "%s %s" % (s, size_name[i])
 
     @staticmethod
-    def getDateStr(float_time):
+    def getDateStr(float_time,format='%d.%m.%Y'):
         """
         Format float time
         :param float_time: float
         :return: formatted date: str()
         """
         time_struct = time.gmtime(float_time)
-        return '%s.%s.%s' % (time_struct[2], time_struct[1], time_struct[0])
+        return time.strftime(format,time_struct)
 
     @staticmethod
     def search(query, dict_list):
@@ -113,7 +113,14 @@ def getArgv(i):
 
 t_dir = os.environ['directory']
 working_path = getWorkingDirectory(t_dir)
-query = getArgv(1)
+query = Tools.getArgv(1)
+
+date_format = str()
+try:
+    date_format = os.environ['date_format']
+except KeyError:
+    pass
+
 
 files_in_directory = None
 file_list = list()
@@ -123,7 +130,7 @@ if working_path is not None:
     file_list = RecentFiles.search(query, files_in_directory) if bool(
         query) and files_in_directory is not None else files_in_directory
 
-wf = Alfred.Items()
+wf = Items()
 # When path not found, expose error to script filter
 
 if files_in_directory is None:
@@ -153,10 +160,11 @@ elif len(file_list) == 0:
 # Expose sorted file list to Script Filter
 else:
     for d in file_list:
-        size = RecentFiles.convertFileSize(d['size'])
-        filename = d['filename']
-        a_date = RecentFiles.getDateStr(d['time'])
         path = d['path']
+        size = RecentFiles.convertFileSize(d['size']) if os.path.isfile(path) else '-'
+        filename = d['filename']
+        a_date = Tools.getDateStr(d['time'],date_format)
+
 
         wf.setItem(
             title=filename,

@@ -1,8 +1,9 @@
 import json
 import sys
+import time
 """
 Alfred Script Filter generator class
-Version: 0.93
+Version: 0.94
 """
 
 
@@ -129,8 +130,35 @@ class Items:
         self.items[id] = dict_item
 
     def write(self, response_type='json'):
+        """
+        generate Script Filter Output and write back to stdout
+        :param response_type: json or dict as output format
+        """
         output = self.getItems(response_type=response_type)
         sys.stdout.write(output)
 
 
+class Tools:
 
+    @staticmethod
+    def getArgv(i):
+        """
+        Get argument values from input in Alfred
+        :param i: index of argument value int()
+        :return: argv str or None
+        """
+        try:
+            return sys.argv[i]
+        except IndexError:
+            pass
+
+    @staticmethod
+    def getDateStr(float_time,format='%d.%m.%Y'):
+        """
+        Format float time
+        :param float_time: float
+        :return: formatted date: str()
+        """
+        time_struct = time.gmtime(float_time)
+        # return '%s.%s.%s' % (time_struct[2], time_struct[1], time_struct[0])
+        return time.strftime(format,time_struct)

@@ -425,8 +425,13 @@ custom folders can be set in List Filter including path to home directory e.g. D
 			<integer>490</integer>
 		</dict>
 	</dict>
+	<key>variables</key>
+	<dict>
+		<key>date_format</key>
+		<string>%d.%m.%Y</string>
+	</dict>
 	<key>version</key>
-	<string>2.1</string>
+	<string>2.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
