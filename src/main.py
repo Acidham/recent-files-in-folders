@@ -31,7 +31,6 @@ class RecentFiles:
                 f_path = self.path + '/' + f
                 os.stat_float_times(True)
                 file_stats = os.stat(f_path)
-                # f_time = file_stats.st_ctime
                 f_time = file_stats.st_birthtime
                 f_size = file_stats.st_size
 
@@ -60,19 +59,9 @@ class RecentFiles:
         return "%s %s" % (s, size_name[i])
 
     @staticmethod
-    def getDateStr(float_time,format='%d.%m.%Y'):
-        """
-        Format float time
-        :param float_time: float
-        :return: formatted date: str()
-        """
-        time_struct = time.gmtime(float_time)
-        return time.strftime(format,time_struct)
-
-    @staticmethod
     def search(query, dict_list):
         """
-        Search string in a list of dictonaries
+        Search string in a list of Dict
         :param query: str()
         :param dict_list: list(dict())
         :return: list(dict())
@@ -84,7 +73,7 @@ class RecentFiles:
         return seq
 
 
-def getWorkingDirectory(directory):
+def parseWorkingDir(directory):
     """
     Parse working directory and adjust if not absolute
     :param directory:
@@ -97,29 +86,10 @@ def getWorkingDirectory(directory):
     return path
 
 
-def getArgv(i):
-    """
-    Get argument values from input in Alfred
-    :param i: index int()
-    :return: query or empty str
-    """
-    try:
-        query = sys.argv[i]
-    except IndexError:
-        query = str()
-        pass
-    return query
-
-
-t_dir = os.environ['directory']
-working_path = getWorkingDirectory(t_dir)
+t_dir = Tools.getEnv('directory')
+working_path = parseWorkingDir(t_dir)
 query = Tools.getArgv(1)
-
-date_format = str()
-try:
-    date_format = os.environ['date_format']
-except KeyError:
-    pass
+date_format = Tools.getEnv('date_format')
 
 
 files_in_directory = None
@@ -164,7 +134,6 @@ else:
         size = RecentFiles.convertFileSize(d['size']) if os.path.isfile(path) else '-'
         filename = d['filename']
         a_date = Tools.getDateStr(d['time'],date_format)
-
 
         wf.setItem(
             title=filename,

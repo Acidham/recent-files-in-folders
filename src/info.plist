@@ -359,7 +359,9 @@ fi</string>
 	<key>readme</key>
 	<string>Shows recent files in a folder and opens the file, reveal in Finder or share via Dropox (requires WF http://www.packal.org/workflow/drop)
 
-custom folders can be set in List Filter including path to home directory e.g. Desktop or Desktop:somefolder</string>
+custom folders can be set in List Filter including path to home directory e.g. Desktop or Desktop:somefolder
+
+Custom string format can be set in date_format workflow value (http://strftime.org/)</string>
 	<key>uidata</key>
 	<dict>
 		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
@@ -431,7 +433,7 @@ custom folders can be set in List Filter including path to home directory e.g. D
 		<string>%d.%m.%Y</string>
 	</dict>
 	<key>version</key>
-	<string>2.2</string>
+	<string>2.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>

@@ -1,6 +1,7 @@
 import json
 import sys
 import time
+import os
 """
 Alfred Script Filter generator class
 Version: 0.94
@@ -141,6 +142,15 @@ class Items:
 class Tools:
 
     @staticmethod
+    def getEnv(var):
+        try:
+            return os.getenv(var)
+        except KeyError:
+            return str()
+            pass
+
+
+    @staticmethod
     def getArgv(i):
         """
         Get argument values from input in Alfred
@@ -153,12 +163,26 @@ class Tools:
             pass
 
     @staticmethod
-    def getDateStr(float_time,format='%d.%m.%Y'):
+    def getDateStr(float_time, format='%d.%m.%Y'):
         """
         Format float time
+        :param format: Date String Format
         :param float_time: float
         :return: formatted date: str()
         """
         time_struct = time.gmtime(float_time)
-        # return '%s.%s.%s' % (time_struct[2], time_struct[1], time_struct[0])
-        return time.strftime(format,time_struct)
+        return time.strftime(format, time_struct)
+
+    @staticmethod
+    def getDateEpoch(float_time, format='%d.%m.%Y'):
+        return time.strftime(format, time.gmtime(float_time/1000))
+
+    @staticmethod
+    def sortListDict(list_dict,key,reverse=True):
+        """
+        Sort List with Dictionary based on given key
+        :param list_dict: list(dict())
+        :param key: str()
+        :param reverse: bool()
+        """
+        return sorted(list_dict, key=lambda k: k[key], reverse=reverse)
