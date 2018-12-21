@@ -1,9 +1,7 @@
 #!/usr/bin/python
 
 import os
-import sys
 import math
-import time
 from Alfred import Items as Items
 from Alfred import Tools as Tools
 
@@ -137,6 +135,7 @@ else:
 
         wf.setItem(
             title=filename,
+            type='file',
             subtitle='Added: %s, Size: %s' % (a_date, size),
             arg=path,
             quicklookurl=path

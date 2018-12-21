@@ -1,7 +1,7 @@
 # Recent Files In Folders
 Alfred Workflow to get recent files in folders
 
-Shows recent files in a folder and opens the file, reveal in Finder or share via Dropox (requires WF http://www.packal.org/workflow/drop)
+Shows recent files in a folder and opens the file, reveal in Finder (CMD) or share via Dropbox (ALT) (requires WF http://www.packal.org/workflow/drop)
 
 Custom string format can be set in *date_format* workflow value (Format cheat sheet: http://strftime.org/)
 

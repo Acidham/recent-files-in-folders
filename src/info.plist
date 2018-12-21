@@ -48,11 +48,11 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>674BF8BB-54DF-4982-9BBE-D2D1751B42E6</string>
+				<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
 				<key>modifiersubtext</key>
-				<string>Enter File Actions ...</string>
+				<string>Share via Dropbox...</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -63,16 +63,6 @@
 				<integer>0</integer>
 				<key>modifiersubtext</key>
 				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-			<dict>
-				<key>destinationuid</key>
-				<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
-				<key>modifiers</key>
-				<integer>262144</integer>
-				<key>modifiersubtext</key>
-				<string>Share via Dropbox...</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -101,28 +91,21 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>68</integer>
-				<key>script</key>
-				<string>on run
-  set theQuery to "{query}"
-  tell application "Alfred 3" to search theQuery
-end run</string>
-				<key>scriptargtype</key>
-				<integer>0</integer>
-				<key>scriptfile</key>
-				<string></string>
-				<key>type</key>
-				<integer>6</integer>
+				<key>externaltriggerid</key>
+				<string>*drop</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>com.apple.alfred.workflow.drop</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.script</string>
+			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>674BF8BB-54DF-4982-9BBE-D2D1751B42E6</string>
+			<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -238,21 +221,10 @@ RETURNS: String
 			<integer>1</integer>
 		</dict>
 		<dict>
-			<key>config</key>
-			<dict>
-				<key>externaltriggerid</key>
-				<string>*drop</string>
-				<key>passinputasargument</key>
-				<true/>
-				<key>passvariables</key>
-				<true/>
-				<key>workflowbundleid</key>
-				<string>com.apple.alfred.workflow.drop</string>
-			</dict>
 			<key>type</key>
-			<string>alfred.workflow.output.callexternaltrigger</string>
+			<string>alfred.workflow.action.revealfile</string>
 			<key>uid</key>
-			<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
+			<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -347,14 +319,6 @@ fi</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
-		<dict>
-			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
-			<key>uid</key>
-			<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
 	</array>
 	<key>readme</key>
 	<string>Shows recent files in a folder and opens the file, reveal in Finder or share via Dropox (requires WF http://www.packal.org/workflow/drop)
@@ -394,14 +358,7 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 		<key>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>610</integer>
-			<key>ypos</key>
-			<integer>340</integer>
-		</dict>
-		<key>674BF8BB-54DF-4982-9BBE-D2D1751B42E6</key>
-		<dict>
-			<key>xpos</key>
-			<integer>610</integer>
+			<integer>600</integer>
 			<key>ypos</key>
 			<integer>40</integer>
 		</dict>
@@ -415,16 +372,16 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 		<key>A74534B6-0DB6-424E-AA7C-556A35206EF0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>610</integer>
+			<integer>600</integer>
 			<key>ypos</key>
 			<integer>200</integer>
 		</dict>
 		<key>B542D53B-E276-46CD-B6F3-358D5B45DE8C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>610</integer>
+			<integer>600</integer>
 			<key>ypos</key>
-			<integer>490</integer>
+			<integer>350</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -433,7 +390,7 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 		<string>%d.%m.%Y</string>
 	</dict>
 	<key>version</key>
-	<string>2.3</string>
+	<string>2.4</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
