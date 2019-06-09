@@ -48,6 +48,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>A8B78260-5716-406D-8CF8-C79829069297</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
 				<key>modifiers</key>
 				<integer>524288</integer>
@@ -58,7 +68,20 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>A74534B6-0DB6-424E-AA7C-556A35206EF0</string>
+				<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Reveal in Finder....</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -66,13 +89,28 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>A8B78260-5716-406D-8CF8-C79829069297</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
+				<string>453C04B5-A677-4401-A8C4-A6888ED6695D</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Reveal in Finder....</string>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>DC709C93-D31C-4286-9AE4-384885DB46D9</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>A74534B6-0DB6-424E-AA7C-556A35206EF0</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
@@ -92,18 +130,18 @@
 			<key>config</key>
 			<dict>
 				<key>externaltriggerid</key>
-				<string>*drop</string>
+				<string>*rc</string>
 				<key>passinputasargument</key>
-				<true/>
+				<false/>
 				<key>passvariables</key>
-				<true/>
+				<false/>
 				<key>workflowbundleid</key>
-				<string>com.apple.alfred.workflow.drop</string>
+				<string>self</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
-			<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
+			<string>453C04B5-A677-4401-A8C4-A6888ED6695D</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -117,9 +155,9 @@
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"},{"title":"Applications","arg":"\/Applications","subtitle":"Show recent files in Applications"}]</string>
+				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"},{"title":"Applications","arg":"\/Applications","subtitle":"Show recent files in Applications"},{"title":"MD Notes","arg":"Dropbox\/Notes","subtitle":"My Markdown Notes"}]</string>
 				<key>keyword</key>
-				<string>recent</string>
+				<string>rc</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>subtext</key>
@@ -139,17 +177,15 @@
 		<dict>
 			<key>config</key>
 			<dict>
-				<key>openwith</key>
-				<string></string>
-				<key>sourcefile</key>
-				<string>{query}</string>
+				<key>triggerid</key>
+				<string>*rc</string>
 			</dict>
 			<key>type</key>
-			<string>alfred.workflow.action.openfile</string>
+			<string>alfred.workflow.trigger.external</string>
 			<key>uid</key>
-			<string>A74534B6-0DB6-424E-AA7C-556A35206EF0</string>
+			<string>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</string>
 			<key>version</key>
-			<integer>3</integer>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -158,6 +194,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -200,7 +238,37 @@ RETURNS: String
 			<key>uid</key>
 			<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string></string>
+						<key>matchcasesensitive</key>
+						<true/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>*RESTART*</string>
+						<key>outputlabel</key>
+						<string>restart</string>
+						<key>uid</key>
+						<string>DC709C93-D31C-4286-9AE4-384885DB46D9</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>else</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>A8B78260-5716-406D-8CF8-C79829069297</string>
+			<key>version</key>
+			<integer>1</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -221,6 +289,45 @@ RETURNS: String
 			<integer>1</integer>
 		</dict>
 		<dict>
+			<key>config</key>
+			<dict>
+				<key>openwith</key>
+				<string></string>
+				<key>sourcefile</key>
+				<string>{query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.openfile</string>
+			<key>uid</key>
+			<string>A74534B6-0DB6-424E-AA7C-556A35206EF0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>externaltriggerid</key>
+				<string>*drop</string>
+				<key>passinputasargument</key>
+				<true/>
+				<key>passvariables</key>
+				<true/>
+				<key>workflowbundleid</key>
+				<string>com.apple.alfred.workflow.drop</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.callexternaltrigger</string>
+			<key>uid</key>
+			<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string></string>
+			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.revealfile</string>
 			<key>uid</key>
@@ -331,18 +438,18 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
 		<dict>
 			<key>xpos</key>
-			<integer>240</integer>
+			<integer>375</integer>
 			<key>ypos</key>
-			<integer>230</integer>
+			<integer>235</integer>
 		</dict>
 		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
 		<dict>
 			<key>note</key>
 			<string>Configure addtional Folders relative or absolute</string>
 			<key>xpos</key>
-			<integer>40</integer>
+			<integer>180</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>205</integer>
 		</dict>
 		<key>1F941EBB-B459-4BFF-8688-97EF827EDC40</key>
 		<dict>
@@ -351,37 +458,58 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>945</integer>
 			<key>ypos</key>
-			<integer>480</integer>
+			<integer>740</integer>
 		</dict>
 		<key>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>945</integer>
 			<key>ypos</key>
-			<integer>40</integer>
+			<integer>470</integer>
+		</dict>
+		<key>453C04B5-A677-4401-A8C4-A6888ED6695D</key>
+		<dict>
+			<key>xpos</key>
+			<integer>945</integer>
+			<key>ypos</key>
+			<integer>185</integer>
 		</dict>
 		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>360</integer>
+			<integer>450</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>205</integer>
+		</dict>
+		<key>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</key>
+		<dict>
+			<key>xpos</key>
+			<integer>10</integer>
+			<key>ypos</key>
+			<integer>205</integer>
 		</dict>
 		<key>A74534B6-0DB6-424E-AA7C-556A35206EF0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>945</integer>
 			<key>ypos</key>
-			<integer>200</integer>
+			<integer>350</integer>
+		</dict>
+		<key>A8B78260-5716-406D-8CF8-C79829069297</key>
+		<dict>
+			<key>xpos</key>
+			<integer>775</integer>
+			<key>ypos</key>
+			<integer>220</integer>
 		</dict>
 		<key>B542D53B-E276-46CD-B6F3-358D5B45DE8C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>600</integer>
+			<integer>945</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>605</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -389,8 +517,10 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 		<key>date_format</key>
 		<string>%d.%m.%Y</string>
 	</dict>
+	<key>variablesdontexport</key>
+	<array/>
 	<key>version</key>
-	<string>2.4</string>
+	<string>3.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>

@@ -1,14 +1,15 @@
 #!/usr/bin/python
 
-import os
 import math
+import os
+
 from Alfred import Items as Items
 from Alfred import Tools as Tools
 
 
 class RecentFiles:
 
-    def __init__(self, path='/'):
+    def __init__(self, path=str()):
         self.path = path
 
     def getRecentFiles(self, reverse=True):
@@ -26,7 +27,7 @@ class RecentFiles:
         if err == 0:
             seq = list()
             for f in file_list:
-                f_path = self.path + '/' + f
+                f_path = "{0}/{1}".format(self.path, f)
                 os.stat_float_times(True)
                 file_stats = os.stat(f_path)
                 f_time = file_stats.st_birthtime
@@ -34,11 +35,12 @@ class RecentFiles:
 
                 not (f.startswith('.')) and seq.append({
                     'filename': f,
-                    'path'    : f_path,
-                    'time'    : f_time,
-                    'size'    : f_size
+                    'path': f_path,
+                    'time': f_time,
+                    'size': f_size
                 })
-            sorted_file_list = sorted(seq, key=lambda k: k['time'], reverse=reverse)
+            sorted_file_list = sorted(
+                seq, key=lambda k: k['time'], reverse=reverse)
             return sorted_file_list
 
     @staticmethod
@@ -54,7 +56,7 @@ class RecentFiles:
         i = int(math.floor(math.log(size_bytes, 1024)))
         p = math.pow(1024, i)
         s = round(size_bytes / p, 2)
-        return "%s %s" % (s, size_name[i])
+        return "{0} {1}".format(s, size_name[i])
 
     @staticmethod
     def search(query, dict_list):
@@ -80,7 +82,7 @@ def parseWorkingDir(directory):
     path = str(directory).replace(':', '/')
     if not (str(path).startswith('/')):
         u_dir = os.path.expanduser('~')
-        path = u_dir + '/' + path
+        path = "{0}/{1}".format(u_dir, path)
     return path
 
 
@@ -92,18 +94,18 @@ date_format = Tools.getEnv('date_format')
 
 files_in_directory = None
 file_list = list()
-if working_path is not None:
+if working_path:
     rf = RecentFiles(working_path)
     files_in_directory = rf.getRecentFiles(reverse=True)
     file_list = RecentFiles.search(query, files_in_directory) if bool(
-        query) and files_in_directory is not None else files_in_directory
+        query) and files_in_directory else files_in_directory
 
 wf = Items()
-# When path not found, expose error to script filter
 
+# When path not found, expose error to script filter
 if files_in_directory is None:
     wf.setItem(
-        title='Path "%s" not found...' % t_dir,
+        title='Path "{0}" not found...'.format(t_dir),
         subtitle='Change path in List Filter, e.g. /Users/<user>/Desktop',
         valid=False
     )
@@ -112,15 +114,17 @@ if files_in_directory is None:
 # In case no files were found in directory
 elif len(files_in_directory) == 0:
     wf.setItem(
-        title='Folder is empty',
-        valid=False
+        title='Folder is empty!',
+        subtitle="ENTER to start again",
+        arg="*RESTART*",
+        valid=True
     )
     wf.setIcon('attention.png', 'png')
     wf.addItem()
 # if file search has no results
 elif len(file_list) == 0:
     wf.setItem(
-        title='Cannot find file starting with "%s"' % query,
+        title='Cannot find file starting with "{0}"'.format(query),
         valid=False
     )
     wf.setIcon('attention.png', 'png')
@@ -129,18 +133,19 @@ elif len(file_list) == 0:
 else:
     for d in file_list:
         path = d['path']
-        size = RecentFiles.convertFileSize(d['size']) if os.path.isfile(path) else '-'
+        size = RecentFiles.convertFileSize(
+            d['size']) if os.path.isfile(path) else '-'
         filename = d['filename']
-        a_date = Tools.getDateStr(d['time'],date_format)
+        a_date = Tools.getDateStr(d['time'], date_format)
 
         wf.setItem(
             title=filename,
             type='file',
-            subtitle='Added: %s, Size: %s' % (a_date, size),
+            subtitle='Added: {0}, Size: {1}'.format(
+                a_date, size),
             arg=path,
             quicklookurl=path
         )
         wf.setIcon(path, 'fileicon')
         wf.addItem()
-
-wf.write(response_type='json')
+wf.write()
