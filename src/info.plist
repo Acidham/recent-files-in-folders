@@ -35,7 +35,30 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
+				<string>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Delete all Files in Folder</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>1F941EBB-B459-4BFF-8688-97EF827EDC40</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>036D93A8-AB80-4DE7-9890-D04B3B788856</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -341,6 +364,53 @@ RETURNS: String
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>query=$1
+path="${HOME}/${query}/*.*"
+rm -rf $path
+echo $query</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>is now empty!</string>
+				<key>title</key>
+				<string>Folder {query}</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>036D93A8-AB80-4DE7-9890-D04B3B788856</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
 				<integer>0</integer>
 				<key>script</key>
 				<string># THESE VARIABLES MUST BE SET. SEE THE ONEUPDATER README FOR AN EXPLANATION OF EACH.
@@ -435,6 +505,13 @@ custom folders can be set in List Filter including path to home directory e.g. D
 Custom string format can be set in date_format workflow value (http://strftime.org/)</string>
 	<key>uidata</key>
 	<dict>
+		<key>036D93A8-AB80-4DE7-9890-D04B3B788856</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1170</integer>
+			<key>ypos</key>
+			<integer>745</integer>
+		</dict>
 		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
 		<dict>
 			<key>xpos</key>
@@ -460,7 +537,7 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 			<key>xpos</key>
 			<integer>945</integer>
 			<key>ypos</key>
-			<integer>740</integer>
+			<integer>890</integer>
 		</dict>
 		<key>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</key>
 		<dict>
@@ -474,7 +551,14 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 			<key>xpos</key>
 			<integer>945</integer>
 			<key>ypos</key>
-			<integer>185</integer>
+			<integer>195</integer>
+		</dict>
+		<key>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</key>
+		<dict>
+			<key>xpos</key>
+			<integer>945</integer>
+			<key>ypos</key>
+			<integer>745</integer>
 		</dict>
 		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
 		<dict>
@@ -502,7 +586,7 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 			<key>xpos</key>
 			<integer>775</integer>
 			<key>ypos</key>
-			<integer>220</integer>
+			<integer>225</integer>
 		</dict>
 		<key>B542D53B-E276-46CD-B6F3-358D5B45DE8C</key>
 		<dict>
@@ -520,7 +604,7 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>3.0</string>
+	<string>3.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
