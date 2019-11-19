@@ -178,7 +178,7 @@
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"},{"title":"Applications","arg":"\/Applications","subtitle":"Show recent files in Applications"},{"title":"MD Notes","arg":"Dropbox\/Notes","subtitle":"My Markdown Notes"}]</string>
+				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"}]</string>
 				<key>keyword</key>
 				<string>rc</string>
 				<key>runningsubtext</key>
