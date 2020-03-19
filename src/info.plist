@@ -178,7 +178,7 @@
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Dropbox\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"}]</string>
+				<string>[{"title":"Clutter","arg":"Documents\/Clutter","subtitle":"Show recent files in Clutter"},{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Documents\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"}]</string>
 				<key>keyword</key>
 				<string>rc</string>
 				<key>runningsubtext</key>
@@ -246,7 +246,7 @@ RETURNS: String
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>main.py</string>
+				<string>main2.py</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -394,9 +394,9 @@ echo $query</string>
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>is now empty!</string>
+				<string>...is now empty!</string>
 				<key>title</key>
-				<string>Folder {query}</string>
+				<string>Folder: {query}</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -502,7 +502,9 @@ fi</string>
 
 custom folders can be set in List Filter including path to home directory e.g. Desktop or Desktop:somefolder
 
-Custom string format can be set in date_format workflow value (http://strftime.org/)</string>
+Custom string format can be set in date_format workflow value (http://strftime.org/)
+
+If search_subfolders is set to True the subfolders in the directory will be read as well. If set to False Subfolders will be ignored</string>
 	<key>uidata</key>
 	<dict>
 		<key>036D93A8-AB80-4DE7-9890-D04B3B788856</key>
@@ -600,11 +602,13 @@ Custom string format can be set in date_format workflow value (http://strftime.o
 	<dict>
 		<key>date_format</key>
 		<string>%d.%m.%Y</string>
+		<key>search_subfolders</key>
+		<string>True</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>3.1</string>
+	<string>3.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
