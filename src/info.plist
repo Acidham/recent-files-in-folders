@@ -35,7 +35,7 @@
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</string>
+				<string>A63455C1-BD98-4E59-A382-6824795C4A56</string>
 				<key>modifiers</key>
 				<integer>1048576</integer>
 				<key>modifiersubtext</key>
@@ -46,19 +46,6 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>1F941EBB-B459-4BFF-8688-97EF827EDC40</string>
-				<key>modifiers</key>
-				<integer>0</integer>
-				<key>modifiersubtext</key>
-				<string></string>
-				<key>vitoclose</key>
-				<false/>
-			</dict>
-		</array>
-		<key>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</key>
-		<array>
-			<dict>
-				<key>destinationuid</key>
-				<string>036D93A8-AB80-4DE7-9890-D04B3B788856</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -105,6 +92,19 @@
 			<dict>
 				<key>destinationuid</key>
 				<string>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>A63455C1-BD98-4E59-A382-6824795C4A56</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>036D93A8-AB80-4DE7-9890-D04B3B788856</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -364,24 +364,20 @@ RETURNS: String
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>102</integer>
+				<integer>0</integer>
 				<key>script</key>
-				<string>query=$1
-path="${HOME}/${query}/*"
-find $path -depth 1 ! -name '.DS_Store' ! -name 'Icon?' -exec rm -r "{}" \;
-rm -rf $path
-echo $query</string>
+				<string></string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string></string>
+				<string>empty.py</string>
 				<key>type</key>
-				<integer>5</integer>
+				<integer>8</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
 			<key>uid</key>
-			<string>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</string>
+			<string>A63455C1-BD98-4E59-A382-6824795C4A56</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
@@ -513,7 +509,7 @@ If search_subfolders is set to True the subfolders in the directory will be read
 			<key>xpos</key>
 			<integer>1170</integer>
 			<key>ypos</key>
-			<integer>745</integer>
+			<integer>755</integer>
 		</dict>
 		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
 		<dict>
@@ -556,13 +552,6 @@ If search_subfolders is set to True the subfolders in the directory will be read
 			<key>ypos</key>
 			<integer>195</integer>
 		</dict>
-		<key>58C8CD57-2B8C-4788-ABC1-6D9929F93E59</key>
-		<dict>
-			<key>xpos</key>
-			<integer>945</integer>
-			<key>ypos</key>
-			<integer>745</integer>
-		</dict>
 		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
 		<dict>
 			<key>xpos</key>
@@ -576,6 +565,13 @@ If search_subfolders is set to True the subfolders in the directory will be read
 			<integer>10</integer>
 			<key>ypos</key>
 			<integer>205</integer>
+		</dict>
+		<key>A63455C1-BD98-4E59-A382-6824795C4A56</key>
+		<dict>
+			<key>xpos</key>
+			<integer>945</integer>
+			<key>ypos</key>
+			<integer>755</integer>
 		</dict>
 		<key>A74534B6-0DB6-424E-AA7C-556A35206EF0</key>
 		<dict>
@@ -609,7 +605,7 @@ If search_subfolders is set to True the subfolders in the directory will be read
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>3.2.1</string>
+	<string>3.2.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
