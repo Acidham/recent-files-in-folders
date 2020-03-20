@@ -33,7 +33,7 @@ class RecentFiles:
                 f_time = file_stats.st_birthtime
                 f_size = file_stats.st_size
 
-                not (f.startswith('.')) and seq.append({
+                not (f.startswith('.') or f.endswith('\r')) and seq.append({
                     'filename': f,
                     'path': f_path,
                     'time': f_time,
@@ -66,7 +66,7 @@ class RecentFiles:
                     f_size = file_stats.st_size
                     f = os.path.basename(f_path)
 
-                    not (f.startswith('.')) and seq.append({
+                    not (f.startswith('.') or f.endswith('\r')) and seq.append({
                         'filename': f,
                         'path': f_path,
                         'time': f_time,

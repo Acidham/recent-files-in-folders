@@ -367,7 +367,8 @@ RETURNS: String
 				<integer>102</integer>
 				<key>script</key>
 				<string>query=$1
-path="${HOME}/${query}/*.*"
+path="${HOME}/${query}/*"
+find $path -depth 1 ! -name '.DS_Store' ! -name 'Icon?' -exec rm -r "{}" \;
 rm -rf $path
 echo $query</string>
 				<key>scriptargtype</key>
@@ -375,7 +376,7 @@ echo $query</string>
 				<key>scriptfile</key>
 				<string></string>
 				<key>type</key>
-				<integer>0</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -608,7 +609,7 @@ If search_subfolders is set to True the subfolders in the directory will be read
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>3.2</string>
+	<string>3.2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
