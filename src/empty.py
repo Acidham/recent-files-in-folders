@@ -15,10 +15,8 @@ def remove(p):
 
 
 HOME = os.path.expanduser('~')
-
 query = Tools.getArgv(1)
-
-root = "{0}/{1}".format(HOME, query)
+root = os.path.join(HOME, query)
 
 for it in os.listdir(root):
     if it != ".DS_Store" and it != "Icon\r":
