@@ -6,12 +6,12 @@ from Alfred import Tools
 
 
 def remove(p):
-    if os.path.isdir(it_path):
-        os.removedirs(it_path)
-    elif os.path.islink(it_path):
-        os.unlink(it_path)
-    else:
-        os.remove(it_path)
+    if os.path.isfile(p):
+        os.remove(p)
+    elif os.path.isdir(p):
+        os.removedirs(p)
+    elif os.path.islink(p):
+        os.unlink(p)
 
 
 HOME = os.path.expanduser('~')
