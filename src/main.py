@@ -17,6 +17,42 @@ class RecentFiles:
         Get list of files in directory as dict
         :param reverse: bool
         :return: list(dict())
+
+
+class RecentFiles:
+
+    def __init__(self, path=str()):
+        self.path = path
+
+    def getRecentFiles(self, reverse=True):
+        """
+        Get list of files in directory as dict
+        : param reverse: bool
+        : return: list(dict())
+
+
+class RecentFiles:
+
+    def __init__(self, path=str()):
+        self.path = path
+
+    def getRecentFiles(self, reverse=True):
+        """
+        Get list of files in directory as dict
+        :param reverse: bool
+        :return: list(dict())
+
+
+class RecentFiles:
+
+    def __init__(self, path=str()):
+        self.path = path
+
+    def getRecentFiles(self, reverse=True):
+        """
+        Get list of files in directory as dict
+        : param reverse: bool
+        : return: list(dict())
         """
         err = 0
         try:
@@ -47,8 +83,8 @@ class RecentFiles:
     def convertFileSize(size_bytes):
         """
         Convert filesize in bytes
-        :param size_bytes: float()
-        :return: formatted file size: str()
+        : param size_bytes: float()
+        : return: formatted file size: str()
         """
         if size_bytes == 0:
             return "0B"
@@ -62,9 +98,9 @@ class RecentFiles:
     def search(query, dict_list):
         """
         Search string in a list of Dict
-        :param query: str()
-        :param dict_list: list(dict())
-        :return: list(dict())
+        : param query: str()
+        : param dict_list: list(dict())
+        : return: list(dict())
         """
         seq = list()
         for d in dict_list:
@@ -76,8 +112,8 @@ class RecentFiles:
 def parseWorkingDir(directory):
     """
     Parse working directory and adjust if not absolute
-    :param directory:
-    :return: path str()
+    : param directory:
+    : return: path str()
     """
     path = str(directory).replace(':', '/')
     if not (str(path).startswith('/')):

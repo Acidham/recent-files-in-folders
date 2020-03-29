@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import os
+import shutil
 import sys
 
 from Alfred import Tools
@@ -9,7 +10,8 @@ def remove(p):
     if os.path.isfile(p):
         os.remove(p)
     elif os.path.isdir(p):
-        os.removedirs(p)
+        shutil.rmtree(p)
+        # os.removedirs(p)
     elif os.path.islink(p):
         os.unlink(p)
 
