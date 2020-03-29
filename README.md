@@ -4,7 +4,7 @@ Alfred Workflow to list recent files in folders, newest on top.
 
 ## NOTE
 
-**With version 4.0 the configuration was integrated in the Workflow from List Filter. After the upgrade it is required to setup the Folder from scratch! **
+**With version 4.0 the configuration was integrated in the Workflow from List Filter. After the upgrade it is required to setup the Folder from scratch!**
 **Please ensure to write down (or Screenshot) your current configuration.**
 
 ## Usage
