@@ -137,7 +137,7 @@ if files_in_directory is None:
 elif len(files_in_directory) == 0:
     wf.setItem(
         title='Folder is empty!',
-        subtitle="ENTER to start again",
+        subtitle=u"\u23CE to start again",
         arg="*RESTART*",
         valid=True
     )

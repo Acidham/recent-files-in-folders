@@ -84,6 +84,16 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>453C04B5-A677-4401-A8C4-A6888ED6695D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
 				<string>C5BEE472-6561-4A1D-8C91-2B19044D889B</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -924,9 +934,9 @@ fi</string>
 		<key>453C04B5-A677-4401-A8C4-A6888ED6695D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<integer>1310</integer>
 			<key>ypos</key>
-			<integer>95</integer>
+			<integer>100</integer>
 		</dict>
 		<key>45C05729-8442-463A-8725-C49A11EC4AF5</key>
 		<dict>
@@ -1042,7 +1052,7 @@ fi</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>4.0</string>
+	<string>4.0.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
