@@ -142,7 +142,7 @@
 	<key>createdby</key>
 	<string>Acidham</string>
 	<key>description</key>
-	<string>List recent created files in a Folder</string>
+	<string>Recent created files in a Folder</string>
 	<key>disabled</key>
 	<false/>
 	<key>name</key>
@@ -178,7 +178,7 @@
 				<key>fixedorder</key>
 				<false/>
 				<key>items</key>
-				<string>[{"title":"Downloads","arg":"Downloads","subtitle":"Show recent files in Dowload Folder"},{"title":"Screenshots","arg":"Documents\/Screenshots","subtitle":"Show recent files in Dowload Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show recent files on Desktop"}]</string>
+				<string>[{"title":"Downloads","arg":"Downloads","subtitle":"Show Files or ⌘ to empty Folder"},{"title":"Screenshots","arg":"Documents\/Screenshots","subtitle":"Show Files or ⌘ to empty Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show Files or ⌘ to empty Folder"}]</string>
 				<key>keyword</key>
 				<string>rc</string>
 				<key>runningsubtext</key>
@@ -186,7 +186,7 @@
 				<key>subtext</key>
 				<string>Choose Folder or ENTER to choose from a List</string>
 				<key>title</key>
-				<string>Shows recent files in a folder</string>
+				<string>Show recent files in Dowload Folder</string>
 				<key>withspace</key>
 				<true/>
 			</dict>

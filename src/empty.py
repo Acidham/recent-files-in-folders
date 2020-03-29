@@ -11,7 +11,6 @@ def remove(p):
         os.remove(p)
     elif os.path.isdir(p):
         shutil.rmtree(p)
-        # os.removedirs(p)
     elif os.path.islink(p):
         os.unlink(p)
 
