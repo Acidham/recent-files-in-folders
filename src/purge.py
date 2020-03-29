@@ -15,12 +15,11 @@ def remove(p):
         os.unlink(p)
 
 
-HOME = os.path.expanduser('~')
-query = Tools.getArgv(1)
-root = os.path.join(HOME, query)
+f_path = Tools.getArgv(1)
 
-for it in os.listdir(root):
+# Purge directory, excl. System files
+for it in os.listdir(f_path):
     if it != ".DS_Store" and it != "Icon\r":
-        it_path = os.path.join(root, it)
+        it_path = os.path.join(f_path, it)
         remove(it_path)
-sys.stdout.write(root)
+sys.stdout.write(f_path)

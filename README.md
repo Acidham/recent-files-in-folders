@@ -1,12 +1,33 @@
 # Recent Files In Folders
-Alfred Workflow to get recent files in folders
 
-Shows recent files in a folder and opens the file, reveal in Finder (CMD), share via Dropbox (ALT) (requires WF http://www.packal.org/workflow/drop) or by applying file actions on the file.
+Alfred Workflow to list recent files in folders, newest on top.
 
-* CMD on a folder provides the ability to delete all files in a folder.
+## NOTE
+
+**With version 4.0 the configuration was integrated in the Workflow from List Filter. After the upgrade it is required to setup the Folder from scratch! **
+**Please ensure to write down (or Screenshot) your current configuration.**
+
+## Usage
+
+1. After the workflow was installed you need to add folders first:
+   1. Search for a folder via Alfred
+   2. Press `Tab` to enter file action
+   3. Search for `Add Folder to Recent Folders` and execute
+
+2. Type `rc` to start Recent Folders Workflow and subsequently the folders will be listed
+3. Press `CMD` to enter addtional actions:
+   1. Back to list of folders
+   2. Purge Directory to delete all files and folders
+   3. Delete folder from configuration
+4. Press `ENTER` to open the underlying file
+5. Press `CMD` to reveal in Finder
+
+## Advance Configuration
+
 * A Custom string format can be set in *date_format* workflow value (Format cheat sheet: http://strftime.org/)
 * If `search_subfolders` is set to `True` the subfolders in the directory will be read as well. If set to `False` Subfolders will be ignored.
 
-custom folders can be set in List Filter relative to home directory e.g. Desktop or Desktop/somefolder or absolute path
+## Screenshot
 
-![](https://content.invisioncic.com/r229491/monthly_2018_05/21-05-2018--0-07-17-SNAP.png.d30d04aa8d44edea32e4d75968b3c884.png)
+<img src="rc.png" alt="rc" style="zoom:50%;" />
+

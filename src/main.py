@@ -17,42 +17,6 @@ class RecentFiles:
         Get list of files in directory as dict
         :param reverse: bool
         :return: list(dict())
-
-
-class RecentFiles:
-
-    def __init__(self, path=str()):
-        self.path = path
-
-    def getRecentFiles(self, reverse=True):
-        """
-        Get list of files in directory as dict
-        : param reverse: bool
-        : return: list(dict())
-
-
-class RecentFiles:
-
-    def __init__(self, path=str()):
-        self.path = path
-
-    def getRecentFiles(self, reverse=True):
-        """
-        Get list of files in directory as dict
-        :param reverse: bool
-        :return: list(dict())
-
-
-class RecentFiles:
-
-    def __init__(self, path=str()):
-        self.path = path
-
-    def getRecentFiles(self, reverse=True):
-        """
-        Get list of files in directory as dict
-        : param reverse: bool
-        : return: list(dict())
         """
         err = 0
         try:
@@ -69,7 +33,7 @@ class RecentFiles:
                 f_time = file_stats.st_birthtime
                 f_size = file_stats.st_size
 
-                not (f.startswith('.')) and seq.append({
+                not (f.startswith('.') or f.endswith('\r')) and seq.append({
                     'filename': f,
                     'path': f_path,
                     'time': f_time,
@@ -79,12 +43,45 @@ class RecentFiles:
                 seq, key=lambda k: k['time'], reverse=reverse)
             return sorted_file_list
 
+    def getRecentFilesDeep(self, reverse=True):
+        """
+        Get list of files in directory as dict
+        :param reverse: bool
+        :return: list(dict())
+        """
+        err = 0
+        try:
+            file_list = os.walk(self.path, topdown=False)
+        except OSError as e:
+            err = e.errno
+            pass
+        if err == 0:
+            seq = list()
+            for root, dirs, files in file_list:
+                for name in files:
+                    f_path = os.path.join(root, name)
+                    os.stat_float_times(True)
+                    file_stats = os.stat(f_path)
+                    f_time = file_stats.st_birthtime
+                    f_size = file_stats.st_size
+                    f = os.path.basename(f_path)
+
+                    not (f.startswith('.') or f.endswith('\r')) and seq.append({
+                        'filename': f,
+                        'path': f_path,
+                        'time': f_time,
+                        'size': f_size
+                    })
+
+            sorted_file_list = sorted(seq, key=lambda k: k['time'], reverse=reverse)
+            return sorted_file_list
+
     @staticmethod
     def convertFileSize(size_bytes):
         """
         Convert filesize in bytes
-        : param size_bytes: float()
-        : return: formatted file size: str()
+        :param size_bytes: float()
+        :return: formatted file size: str()
         """
         if size_bytes == 0:
             return "0B"
@@ -98,9 +95,9 @@ class RecentFiles:
     def search(query, dict_list):
         """
         Search string in a list of Dict
-        : param query: str()
-        : param dict_list: list(dict())
-        : return: list(dict())
+        :param query: str()
+        :param dict_list: list(dict())
+        :return: list(dict())
         """
         seq = list()
         for d in dict_list:
@@ -109,30 +106,19 @@ class RecentFiles:
         return seq
 
 
-def parseWorkingDir(directory):
-    """
-    Parse working directory and adjust if not absolute
-    : param directory:
-    : return: path str()
-    """
-    path = str(directory).replace(':', '/')
-    if not (str(path).startswith('/')):
-        u_dir = os.path.expanduser('~')
-        path = "{0}/{1}".format(u_dir, path)
-    return path
-
-
+# Load Env, Argv and set working path
 t_dir = Tools.getEnv('directory')
-working_path = parseWorkingDir(t_dir)
+search_subfolders = True if Tools.getEnv('search_subfolders') == "True" else False
+working_path = t_dir
 query = Tools.getArgv(1)
 date_format = Tools.getEnv('date_format')
 
-
+# Read file list deep and normal
 files_in_directory = None
 file_list = list()
 if working_path:
     rf = RecentFiles(working_path)
-    files_in_directory = rf.getRecentFiles(reverse=True)
+    files_in_directory = rf.getRecentFilesDeep(reverse=True) if search_subfolders else rf.getRecentFiles(reverse=True)
     file_list = RecentFiles.search(query, files_in_directory) if bool(
         query) and files_in_directory else files_in_directory
 
@@ -177,7 +163,7 @@ else:
         wf.setItem(
             title=filename,
             type='file',
-            subtitle='Added: {0}, Size: {1}'.format(
+            subtitle=u'Added: {0}, Size: {1} (\u2318 Reveal in Finder)'.format(
                 a_date, size),
             arg=path,
             quicklookurl=path

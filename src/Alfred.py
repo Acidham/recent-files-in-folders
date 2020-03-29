@@ -40,8 +40,8 @@ class Items(object):
 
     def setItem(self, **kwargs):
         """Add multiple key values to define an item
-        Note: addItem needs to be called to submit a Script Filter item 
-        to the Script Filter object 
+        Note: addItem needs to be called to submit a Script Filter item
+        to the Script Filter object
 
         Args:
             kwargs (kwargs): title,subtitle,arg,valid,quicklookurl,uid,automcomplete,type
@@ -302,6 +302,13 @@ class Tools(object):
         for k, v in environment.iteritems():
             env_dict.update({k: v})
         return env_dict
+
+    @staticmethod
+    def getDataDir():
+        data_dir = os.getenv('alfred_workflow_data')
+        if not(os.path.isdir(data_dir)):
+            os.mkdir(data_dir)
+        return data_dir
 
 
 class Plist:

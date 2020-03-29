@@ -12,6 +12,52 @@
 		<array>
 			<dict>
 				<key>destinationuid</key>
+				<string>6F4F6207-260D-4549-BD57-656FE8F83A92</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>1F71C1FB-CF5D-4842-86E1-64BF110B74AC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>37819932-6353-4D02-89B3-824820362956</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>1F941EBB-B459-4BFF-8688-97EF827EDC40</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</string>
+				<key>modifiers</key>
+				<integer>1048576</integer>
+				<key>modifiersubtext</key>
+				<string>Actions</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>37819932-6353-4D02-89B3-824820362956</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
 				<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
 				<key>modifiers</key>
 				<integer>0</integer>
@@ -21,11 +67,11 @@
 				<false/>
 			</dict>
 		</array>
-		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
+		<key>38F95E2B-A72E-404C-B64E-B8C606E332F5</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</string>
+				<string>599D8C67-C857-4846-ACA8-EAA8561F8C57</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -33,19 +79,49 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+		</array>
+		<key>45C05729-8442-463A-8725-C49A11EC4AF5</key>
+		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>A63455C1-BD98-4E59-A382-6824795C4A56</string>
+				<string>C5BEE472-6561-4A1D-8C91-2B19044D889B</string>
 				<key>modifiers</key>
-				<integer>1048576</integer>
+				<integer>0</integer>
 				<key>modifiersubtext</key>
-				<string>Delete all Files in Folder</string>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>599D8C67-C857-4846-ACA8-EAA8561F8C57</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>453C04B5-A677-4401-A8C4-A6888ED6695D</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>6ED80BCA-7105-4B0C-9A6A-82374BCD3537</string>
 				<key>vitoclose</key>
 				<false/>
 			</dict>
 			<dict>
 				<key>destinationuid</key>
-				<string>1F941EBB-B459-4BFF-8688-97EF827EDC40</string>
+				<string>C6FC6DEA-30CE-442F-995F-2AE1A6937417</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>sourceoutputuid</key>
+				<string>F0D33E5E-2556-4E28-AAFE-1B0442229538</string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>DFE321CC-443D-4A96-866A-952300D0EC5E</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -87,11 +163,24 @@
 				<false/>
 			</dict>
 		</array>
+		<key>6F4F6207-260D-4549-BD57-656FE8F83A92</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>38F95E2B-A72E-404C-B64E-B8C606E332F5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 		<key>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</key>
 		<array>
 			<dict>
 				<key>destinationuid</key>
-				<string>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</string>
+				<string>1F71C1FB-CF5D-4842-86E1-64BF110B74AC</string>
 				<key>modifiers</key>
 				<integer>0</integer>
 				<key>modifiersubtext</key>
@@ -138,6 +227,45 @@
 				<false/>
 			</dict>
 		</array>
+		<key>AA6FDC26-BD88-4520-81EE-3A7C9C527CDC</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>45C05729-8442-463A-8725-C49A11EC4AF5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>C6FC6DEA-30CE-442F-995F-2AE1A6937417</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>A63455C1-BD98-4E59-A382-6824795C4A56</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
+		<key>DFE321CC-443D-4A96-866A-952300D0EC5E</key>
+		<array>
+			<dict>
+				<key>destinationuid</key>
+				<string>45C05729-8442-463A-8725-C49A11EC4AF5</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
+		</array>
 	</dict>
 	<key>createdby</key>
 	<string>Acidham</string>
@@ -165,48 +293,6 @@
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>453C04B5-A677-4401-A8C4-A6888ED6695D</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>argumenttrimmode</key>
-				<integer>0</integer>
-				<key>argumenttype</key>
-				<integer>1</integer>
-				<key>fixedorder</key>
-				<false/>
-				<key>items</key>
-				<string>[{"title":"Downloads","arg":"Downloads","subtitle":"Show Files or ⌘ to empty Folder"},{"title":"Screenshots","arg":"Documents\/Screenshots","subtitle":"Show Files or ⌘ to empty Folder"},{"title":"Desktop","arg":"Desktop","subtitle":"Show Files or ⌘ to empty Folder"}]</string>
-				<key>keyword</key>
-				<string>rc</string>
-				<key>runningsubtext</key>
-				<string></string>
-				<key>subtext</key>
-				<string>Choose Folder or ENTER to choose from a List</string>
-				<key>title</key>
-				<string>Show recent files in Dowload Folder</string>
-				<key>withspace</key>
-				<true/>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.input.listfilter</string>
-			<key>uid</key>
-			<string>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>triggerid</key>
-				<string>*rc</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.trigger.external</string>
-			<key>uid</key>
-			<string>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -246,7 +332,7 @@ RETURNS: String
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
-				<string>main2.py</string>
+				<string>main.py</string>
 				<key>subtext</key>
 				<string></string>
 				<key>title</key>
@@ -260,6 +346,68 @@ RETURNS: String
 			<string>alfred.workflow.input.scriptfilter</string>
 			<key>uid</key>
 			<string>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>triggerid</key>
+				<string>*rc</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.external</string>
+			<key>uid</key>
+			<string>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>1</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>keyword</key>
+				<string>rc</string>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>list_dirs.py</string>
+				<key>subtext</key>
+				<string>List Recent Files in Folders</string>
+				<key>title</key>
+				<string>Recent Files in Folders</string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<true/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>1F71C1FB-CF5D-4842-86E1-64BF110B74AC</string>
 			<key>version</key>
 			<integer>3</integer>
 		</dict>
@@ -307,7 +455,7 @@ RETURNS: String
 			<key>type</key>
 			<string>alfred.workflow.utility.argument</string>
 			<key>uid</key>
-			<string>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</string>
+			<string>37819932-6353-4D02-89B3-824820362956</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -342,63 +490,6 @@ RETURNS: String
 			<string>alfred.workflow.output.callexternaltrigger</string>
 			<key>uid</key>
 			<string>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>path</key>
-				<string></string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.revealfile</string>
-			<key>uid</key>
-			<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
-			<key>version</key>
-			<integer>1</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>concurrently</key>
-				<false/>
-				<key>escaping</key>
-				<integer>0</integer>
-				<key>script</key>
-				<string></string>
-				<key>scriptargtype</key>
-				<integer>1</integer>
-				<key>scriptfile</key>
-				<string>empty.py</string>
-				<key>type</key>
-				<integer>8</integer>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.action.script</string>
-			<key>uid</key>
-			<string>A63455C1-BD98-4E59-A382-6824795C4A56</string>
-			<key>version</key>
-			<integer>2</integer>
-		</dict>
-		<dict>
-			<key>config</key>
-			<dict>
-				<key>lastpathcomponent</key>
-				<false/>
-				<key>onlyshowifquerypopulated</key>
-				<false/>
-				<key>removeextension</key>
-				<false/>
-				<key>text</key>
-				<string>...is now empty!</string>
-				<key>title</key>
-				<string>Folder: {query}</string>
-			</dict>
-			<key>type</key>
-			<string>alfred.workflow.output.notification</string>
-			<key>uid</key>
-			<string>036D93A8-AB80-4DE7-9890-D04B3B788856</string>
 			<key>version</key>
 			<integer>1</integer>
 		</dict>
@@ -493,39 +584,310 @@ fi</string>
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>path</key>
+				<string></string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.revealfile</string>
+			<key>uid</key>
+			<string>B542D53B-E276-46CD-B6F3-358D5B45DE8C</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>alfredfiltersresults</key>
+				<false/>
+				<key>alfredfiltersresultsmatchmode</key>
+				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<true/>
+				<key>argumenttrimmode</key>
+				<integer>0</integer>
+				<key>argumenttype</key>
+				<integer>2</integer>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>queuedelaycustom</key>
+				<integer>3</integer>
+				<key>queuedelayimmediatelyinitially</key>
+				<true/>
+				<key>queuedelaymode</key>
+				<integer>0</integer>
+				<key>queuemode</key>
+				<integer>1</integer>
+				<key>runningsubtext</key>
+				<string></string>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>actions.py</string>
+				<key>subtext</key>
+				<string></string>
+				<key>title</key>
+				<string></string>
+				<key>type</key>
+				<integer>8</integer>
+				<key>withspace</key>
+				<false/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.input.scriptfilter</string>
+			<key>uid</key>
+			<string>6F4F6207-260D-4549-BD57-656FE8F83A92</string>
+			<key>version</key>
+			<integer>3</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>purge.py</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>A63455C1-BD98-4E59-A382-6824795C4A56</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Folder was purged!</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>036D93A8-AB80-4DE7-9890-D04B3B788856</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>conditions</key>
+				<array>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action2}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>BACK</string>
+						<key>outputlabel</key>
+						<string>BACK</string>
+						<key>uid</key>
+						<string>6ED80BCA-7105-4B0C-9A6A-82374BCD3537</string>
+					</dict>
+					<dict>
+						<key>inputstring</key>
+						<string>{var:action2}</string>
+						<key>matchcasesensitive</key>
+						<false/>
+						<key>matchmode</key>
+						<integer>0</integer>
+						<key>matchstring</key>
+						<string>PURGE</string>
+						<key>outputlabel</key>
+						<string>PURGE</string>
+						<key>uid</key>
+						<string>F0D33E5E-2556-4E28-AAFE-1B0442229538</string>
+					</dict>
+				</array>
+				<key>elselabel</key>
+				<string>DELETE</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.conditional</string>
+			<key>uid</key>
+			<string>599D8C67-C857-4846-ACA8-EAA8561F8C57</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string></string>
+				<key>variables</key>
+				<dict>
+					<key>directory</key>
+					<string>{query}</string>
+				</dict>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:action1}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>C6FC6DEA-30CE-442F-995F-2AE1A6937417</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>delimiter</key>
+				<string>|</string>
+				<key>trimarguments</key>
+				<true/>
+				<key>variableprefix</key>
+				<string>action</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.split</string>
+			<key>uid</key>
+			<string>38F95E2B-A72E-404C-B64E-B8C606E332F5</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>argument</key>
+				<string>{var:action1}|{var:action2}</string>
+				<key>variables</key>
+				<dict/>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.utility.argument</string>
+			<key>uid</key>
+			<string>DFE321CC-443D-4A96-866A-952300D0EC5E</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>lastpathcomponent</key>
+				<false/>
+				<key>onlyshowifquerypopulated</key>
+				<false/>
+				<key>removeextension</key>
+				<false/>
+				<key>text</key>
+				<string>{query}</string>
+				<key>title</key>
+				<string>Recent Files in Folder</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.output.notification</string>
+			<key>uid</key>
+			<string>C5BEE472-6561-4A1D-8C91-2B19044D889B</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>0</integer>
+				<key>script</key>
+				<string></string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string>list_manager.py</string>
+				<key>type</key>
+				<integer>8</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>45C05729-8442-463A-8725-C49A11EC4AF5</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>acceptsmulti</key>
+				<false/>
+				<key>filetypes</key>
+				<array>
+					<string>public.folder</string>
+					<string>public.symlink</string>
+				</array>
+				<key>name</key>
+				<string>Add Folder to Recent Folders</string>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.trigger.action</string>
+			<key>uid</key>
+			<string>AA6FDC26-BD88-4520-81EE-3A7C9C527CDC</string>
+			<key>version</key>
+			<integer>1</integer>
+		</dict>
 	</array>
 	<key>readme</key>
-	<string>Shows recent files in a folder and opens the file, reveal in Finder or share via Dropox (requires WF http://www.packal.org/workflow/drop)
-
-custom folders can be set in List Filter including path to home directory e.g. Desktop or Desktop:somefolder
-
-Custom string format can be set in date_format workflow value (http://strftime.org/)
-
-If search_subfolders is set to True the subfolders in the directory will be read as well. If set to False Subfolders will be ignored</string>
+	<string>https://github.com/Acidham/recent-files-in-folders</string>
 	<key>uidata</key>
 	<dict>
 		<key>036D93A8-AB80-4DE7-9890-D04B3B788856</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1170</integer>
+			<integer>1310</integer>
 			<key>ypos</key>
-			<integer>755</integer>
+			<integer>620</integer>
 		</dict>
 		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
 		<dict>
 			<key>xpos</key>
-			<integer>375</integer>
+			<integer>525</integer>
 			<key>ypos</key>
-			<integer>235</integer>
+			<integer>650</integer>
 		</dict>
-		<key>0DEC862B-5E77-4C4E-8EAE-793EFAC1F505</key>
+		<key>1F71C1FB-CF5D-4842-86E1-64BF110B74AC</key>
 		<dict>
 			<key>note</key>
-			<string>Configure addtional Folders relative or absolute</string>
+			<string>List Directories from configuration</string>
 			<key>xpos</key>
-			<integer>180</integer>
+			<integer>220</integer>
 			<key>ypos</key>
-			<integer>205</integer>
+			<integer>105</integer>
 		</dict>
 		<key>1F941EBB-B459-4BFF-8688-97EF827EDC40</key>
 		<dict>
@@ -534,65 +896,140 @@ If search_subfolders is set to True the subfolders in the directory will be read
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>590</integer>
 			<key>ypos</key>
-			<integer>890</integer>
+			<integer>370</integer>
 		</dict>
 		<key>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>470</integer>
+			<integer>340</integer>
+		</dict>
+		<key>37819932-6353-4D02-89B3-824820362956</key>
+		<dict>
+			<key>xpos</key>
+			<integer>525</integer>
+			<key>ypos</key>
+			<integer>135</integer>
+		</dict>
+		<key>38F95E2B-A72E-404C-B64E-B8C606E332F5</key>
+		<dict>
+			<key>xpos</key>
+			<integer>770</integer>
+			<key>ypos</key>
+			<integer>650</integer>
 		</dict>
 		<key>453C04B5-A677-4401-A8C4-A6888ED6695D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>195</integer>
+			<integer>95</integer>
+		</dict>
+		<key>45C05729-8442-463A-8725-C49A11EC4AF5</key>
+		<dict>
+			<key>note</key>
+			<string>Edit/Delete Entry</string>
+			<key>xpos</key>
+			<integer>1085</integer>
+			<key>ypos</key>
+			<integer>780</integer>
+		</dict>
+		<key>599D8C67-C857-4846-ACA8-EAA8561F8C57</key>
+		<dict>
+			<key>xpos</key>
+			<integer>850</integer>
+			<key>ypos</key>
+			<integer>625</integer>
 		</dict>
 		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
 		<dict>
+			<key>note</key>
+			<string>List folder entries</string>
 			<key>xpos</key>
-			<integer>450</integer>
+			<integer>590</integer>
 			<key>ypos</key>
-			<integer>205</integer>
+			<integer>105</integer>
+		</dict>
+		<key>6F4F6207-260D-4549-BD57-656FE8F83A92</key>
+		<dict>
+			<key>note</key>
+			<string>Action menu: 
+1. Purge 
+2. Delete Entry</string>
+			<key>xpos</key>
+			<integer>590</integer>
+			<key>ypos</key>
+			<integer>620</integer>
 		</dict>
 		<key>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</key>
 		<dict>
 			<key>xpos</key>
 			<integer>10</integer>
 			<key>ypos</key>
-			<integer>205</integer>
+			<integer>105</integer>
 		</dict>
 		<key>A63455C1-BD98-4E59-A382-6824795C4A56</key>
 		<dict>
+			<key>note</key>
+			<string>Purge Folder Action</string>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>755</integer>
+			<integer>620</integer>
 		</dict>
 		<key>A74534B6-0DB6-424E-AA7C-556A35206EF0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>350</integer>
+			<integer>220</integer>
 		</dict>
 		<key>A8B78260-5716-406D-8CF8-C79829069297</key>
 		<dict>
 			<key>xpos</key>
-			<integer>775</integer>
+			<integer>925</integer>
 			<key>ypos</key>
-			<integer>225</integer>
+			<integer>130</integer>
+		</dict>
+		<key>AA6FDC26-BD88-4520-81EE-3A7C9C527CDC</key>
+		<dict>
+			<key>note</key>
+			<string>File Action to add to config</string>
+			<key>xpos</key>
+			<integer>15</integer>
+			<key>ypos</key>
+			<integer>780</integer>
 		</dict>
 		<key>B542D53B-E276-46CD-B6F3-358D5B45DE8C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>945</integer>
+			<integer>1085</integer>
 			<key>ypos</key>
-			<integer>605</integer>
+			<integer>475</integer>
+		</dict>
+		<key>C5BEE472-6561-4A1D-8C91-2B19044D889B</key>
+		<dict>
+			<key>xpos</key>
+			<integer>1310</integer>
+			<key>ypos</key>
+			<integer>780</integer>
+		</dict>
+		<key>C6FC6DEA-30CE-442F-995F-2AE1A6937417</key>
+		<dict>
+			<key>xpos</key>
+			<integer>980</integer>
+			<key>ypos</key>
+			<integer>650</integer>
+		</dict>
+		<key>DFE321CC-443D-4A96-866A-952300D0EC5E</key>
+		<dict>
+			<key>xpos</key>
+			<integer>980</integer>
+			<key>ypos</key>
+			<integer>760</integer>
 		</dict>
 	</dict>
 	<key>variables</key>
@@ -605,7 +1042,7 @@ If search_subfolders is set to True the subfolders in the directory will be read
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>3.2.3</string>
+	<string>4.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
