@@ -321,8 +321,6 @@
 				<integer>2</integer>
 				<key>escaping</key>
 				<integer>68</integer>
-				<key>keyword</key>
-				<string>*listfolder</string>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -456,6 +454,8 @@ RETURNS: String
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>directory</key>
@@ -747,6 +747,8 @@ fi</string>
 			<dict>
 				<key>argument</key>
 				<string></string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict>
 					<key>directory</key>
@@ -765,6 +767,8 @@ fi</string>
 			<dict>
 				<key>argument</key>
 				<string>{var:action1}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -797,6 +801,8 @@ fi</string>
 			<dict>
 				<key>argument</key>
 				<string>{var:action1}|{var:action2}</string>
+				<key>passthroughargument</key>
+				<false/>
 				<key>variables</key>
 				<dict/>
 			</dict>
@@ -873,7 +879,15 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>https://github.com/Acidham/recent-files-in-folders</string>
+	<string>https://github.com/Acidham/recent-files-in-folders
+
+search_subfolders:
+True = Search for files including Subfolders
+False = Search files in Recent Folder
+
+ext_comma_sep: 
+Comma separated list of file extensions to search for e.g. jpg,png,pdf
+Leave empty to search over all filetypes</string>
 	<key>uidata</key>
 	<dict>
 		<key>036D93A8-AB80-4DE7-9890-D04B3B788856</key>
@@ -1046,13 +1060,15 @@ fi</string>
 	<dict>
 		<key>date_format</key>
 		<string>%d.%m.%Y</string>
+		<key>ext_comma_sep</key>
+		<string></string>
 		<key>search_subfolders</key>
 		<string>True</string>
 	</dict>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>4.0.1</string>
+	<string>4.1.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>

@@ -9,8 +9,9 @@ from Alfred import Tools as Tools
 
 class RecentFiles:
 
-    def __init__(self, path=str()):
+    def __init__(self, filter, path=str()):
         self.path = path
+        self.filter = filter
 
     def getRecentFiles(self, reverse=True):
         """
@@ -28,6 +29,7 @@ class RecentFiles:
             seq = list()
             for f in file_list:
                 f_path = "{0}/{1}".format(self.path, f)
+                f_ext = self._getExt(f)
                 os.stat_float_times(True)
                 file_stats = os.stat(f_path)
                 f_time = file_stats.st_birthtime
@@ -37,11 +39,12 @@ class RecentFiles:
                     'filename': f,
                     'path': f_path,
                     'time': f_time,
-                    'size': f_size
+                    'size': f_size,
+                    'ext': f_ext
                 })
             sorted_file_list = sorted(
                 seq, key=lambda k: k['time'], reverse=reverse)
-            return sorted_file_list
+            return self._apply_filter(sorted_file_list)
 
     def getRecentFilesDeep(self, reverse=True):
         """
@@ -60,6 +63,7 @@ class RecentFiles:
             for root, dirs, files in file_list:
                 for name in files:
                     f_path = os.path.join(root, name)
+                    f_ext = self._getExt(name)
                     os.stat_float_times(True)
                     file_stats = os.stat(f_path)
                     f_time = file_stats.st_birthtime
@@ -70,11 +74,28 @@ class RecentFiles:
                         'filename': f,
                         'path': f_path,
                         'time': f_time,
-                        'size': f_size
+                        'size': f_size,
+                        'ext': f_ext
                     })
 
             sorted_file_list = sorted(seq, key=lambda k: k['time'], reverse=reverse)
-            return sorted_file_list
+            return self._apply_filter(sorted_file_list)
+
+    def _apply_filter(self, file_list_dict):
+        seq = list()
+        if self.filter[0] is not "":
+            for f in file_list_dict:
+                if f['ext'] in self.filter:
+                    seq.append(f)
+        else:
+            seq = file_list_dict
+        return seq
+
+    @staticmethod
+    def _getExt(f_name):
+        f_ext = os.path.splitext(f_name)[1:][0]
+        ret = f_ext.replace(".", "")
+        return ret
 
     @staticmethod
     def convertFileSize(size_bytes):
@@ -112,12 +133,13 @@ search_subfolders = True if Tools.getEnv('search_subfolders') == "True" else Fal
 working_path = t_dir
 query = Tools.getArgv(1)
 date_format = Tools.getEnv('date_format')
+extensions = Tools.getEnv('ext_comma_sep').split(',')
 
 # Read file list deep and normal
 files_in_directory = None
 file_list = list()
 if working_path:
-    rf = RecentFiles(working_path)
+    rf = RecentFiles(extensions, working_path)
     files_in_directory = rf.getRecentFilesDeep(reverse=True) if search_subfolders else rf.getRecentFiles(reverse=True)
     file_list = RecentFiles.search(query, files_in_directory) if bool(
         query) and files_in_directory else files_in_directory

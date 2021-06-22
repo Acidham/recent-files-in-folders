@@ -26,6 +26,7 @@ Alfred Workflow to list recent files in folders, newest on top.
 
 * A Custom string format can be set in *date_format* workflow value (Format cheat sheet: http://strftime.org/)
 * If `search_subfolders` is set to `True` the subfolders in the directory will be read as well. If set to `False` Subfolders will be ignored.
+* To restrict search to certain filetypes add a comma separated list of extensions to `ext_comma_sep` e.g. `jpg,png` will only search for jpg and png files. 
 
 ## Screenshot
 

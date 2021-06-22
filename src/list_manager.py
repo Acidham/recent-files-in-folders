@@ -34,6 +34,7 @@ else:
             new_config.update({k: v})
     config = new_config
 
+# Remove config before saving changes
 os.path.isfile(config_file) and os.remove(config_file)
 with open(config_file, 'w') as f:
     f.write(json.dumps(config, indent=2))

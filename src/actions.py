@@ -31,7 +31,7 @@ wf.addItem()
 
 # Delete Item
 wf.setItem(
-    title="Remove Folder",
+    title="Remove Folder entry",
     subtitle='Remove "{}" from configuration'.format(target_dir),
     arg='{0}|{1}'.format(target_dir, "DELETE")
 )

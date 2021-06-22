@@ -24,7 +24,9 @@ if os.path.isfile(config_file):
                 wf.addMod(
                     key="cmd",
                     arg=v,
-                    subtitle="Enter Action Menu"
+                    subtitle="Enter Action Menu to purge folder or delete entry",
+                    icon_path='gear.png',
+                    icon_type="image"
                 )
                 wf.addModsToItem()
             elif not(os.path.isdir(v)):
