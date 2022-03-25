@@ -1,6 +1,6 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
-from Alfred import Items, Tools
+from Alfred3 import Items, Tools
 
 target_dir = Tools.getEnv('directory')
 

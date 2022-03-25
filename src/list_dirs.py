@@ -1,9 +1,9 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import json
 import os
 
-from Alfred import Items, Tools
+from Alfred3 import Items, Tools
 
 query = Tools.getArgv(1)
 wf_data_dir = Tools.getDataDir()

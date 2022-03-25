@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import math
 import os
 
-from Alfred import Items as Items
-from Alfred import Tools as Tools
+from Alfred3 import Items as Items
+from Alfred3 import Tools as Tools
 
 
 class RecentFiles:
@@ -30,7 +30,6 @@ class RecentFiles:
             for f in file_list:
                 f_path = "{0}/{1}".format(self.path, f)
                 f_ext = self._getExt(f)
-                os.stat_float_times(True)
                 file_stats = os.stat(f_path)
                 f_time = file_stats.st_birthtime
                 f_size = file_stats.st_size
@@ -63,25 +62,37 @@ class RecentFiles:
             for root, dirs, files in file_list:
                 for name in files:
                     f_path = os.path.join(root, name)
-                    f_ext = self._getExt(name)
-                    os.stat_float_times(True)
-                    file_stats = os.stat(f_path)
-                    f_time = file_stats.st_birthtime
-                    f_size = file_stats.st_size
                     f = os.path.basename(f_path)
+                    if os.path.isfile(f_path) and not(f.startswith('.') or f.endswith('\r')):
+                        f_ext = self._getExt(name)
+                        file_stats = os.stat(f_path)
+                        f_time = file_stats.st_birthtime
+                        f_size = file_stats.st_size
 
-                    not (f.startswith('.') or f.endswith('\r')) and seq.append({
-                        'filename': f,
-                        'path': f_path,
-                        'time': f_time,
-                        'size': f_size,
-                        'ext': f_ext
-                    })
+                        seq.append({
+                            'filename': f,
+                            'path': f_path,
+                            'time': f_time,
+                            'size': f_size,
+                            'ext': f_ext
+                        })
 
             sorted_file_list = sorted(seq, key=lambda k: k['time'], reverse=reverse)
             return self._apply_filter(sorted_file_list)
 
     def _apply_filter(self, file_list_dict):
+        """
+        Apply extension filter to search results.
+        If empty full file list will be returned
+
+        Args:
+
+            file_list_dict (list): List with file dict
+
+        Returns:
+
+            list: file list dict
+        """
         seq = list()
         if self.filter[0] is not "":
             for f in file_list_dict:
@@ -93,6 +104,17 @@ class RecentFiles:
 
     @staticmethod
     def _getExt(f_name):
+        """
+        Get file extension from filename
+
+        Args:
+
+            f_name (string): filename
+
+        Returns:
+
+            string: extension without leading dot
+        """
         f_ext = os.path.splitext(f_name)[1:][0]
         ret = f_ext.replace(".", "")
         return ret

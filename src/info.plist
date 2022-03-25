@@ -332,11 +332,7 @@
 				<key>runningsubtext</key>
 				<string>collecting...</string>
 				<key>script</key>
-				<string>on run	set home to path to home folder	set theFolder to (home as string) &amp; "{query}"	--set theFolder to (home as string) &amp; "Dropbox:Screenshots"	-- get list of files in directory	tell application "Finder"		set theItems to (every file of folder theFolder)		set theItems to sort theItems by modification date		set theItems to reverse of theItems	end tell		-- create XML Output	set xml to "&lt;?xml version=\"1.0\"?&gt;&lt;items&gt;"	repeat with theItem in theItems		-- get file alias		set theFile to (theItem as alias)		-- check if file is visible or not		tell application "System Events" to set isVis to visible of theFile		-- get filename		tell application "Finder" to set theFilename to name of file (theItem as alias)		-- encode file path string for xml 		set theFile to StringReplace(theFile as string, "&amp;", "&amp;amp;")		-- encode filename		set theFilename to StringReplace(theFilename, "&amp;", "&amp;amp;") as string		-- if file is visible then add xml item		if isVis then						-- change icon for non png or jpgs			tell application "Finder"				set the theExt to name extension of theItem			end tell			if theExt is equal to "png" or theExt is equal to "jpg" then				set iconStr to ""			else				set iconStr to " type=\"fileicon\""			end if			-- remove last charater if char is :			if last character of theFile is equal to ":" then set theFile to text 1 thru -2 of theFile												set xml to xml &amp; "&lt;item arg=\"" &amp; (POSIX path of theFile) &amp; "\" valid=\"yes\"&gt;&lt;title&gt;" &amp; theFilename &amp; "&lt;/title&gt;&lt;subtitle&gt;Press ENTER to open...&lt;/subtitle&gt;
-&lt;quicklookurl&gt;" &amp; (POSIX path of theFile) &amp; "&lt;/quicklookurl&gt;&lt;icon" &amp; iconStr &amp; "&gt;" &amp; (POSIX path of theFile) &amp; "&lt;/icon&gt;&lt;/item&gt;"		end if	end repeat		set xml to xml &amp; "&lt;/items&gt;"	return xmlend run(* ==============================================
-FUNCTION: Function to Replace a text within a string
-RETURNS: String 
-==============================================*)on StringReplace(theText, theOldString, theNewString) -- String(String, String, String)	set theCommand to "echo \"" &amp; theText &amp; "\" | sed 's/" &amp; theOldString &amp; "/" &amp; theNewString &amp; "/g'"	--	display dialog theCommand	set theNewText to do shell script theCommand	return theNewTextend StringReplace</string>
+				<string>./py3.sh main.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -346,7 +342,7 @@ RETURNS: String
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -384,7 +380,7 @@ RETURNS: String
 				<key>argumenttype</key>
 				<integer>1</integer>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>keyword</key>
 				<string>rc</string>
 				<key>queuedelaycustom</key>
@@ -398,7 +394,7 @@ RETURNS: String
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string></string>
+				<string>./py3.sh list_dirs.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -408,7 +404,7 @@ RETURNS: String
 				<key>title</key>
 				<string>Recent Files in Folders</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<true/>
 			</dict>
@@ -621,7 +617,7 @@ fi</string>
 				<key>argumenttype</key>
 				<integer>2</integer>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>queuedelaycustom</key>
 				<integer>3</integer>
 				<key>queuedelayimmediatelyinitially</key>
@@ -633,7 +629,7 @@ fi</string>
 				<key>runningsubtext</key>
 				<string></string>
 				<key>script</key>
-				<string></string>
+				<string>./py3.sh actions.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -643,7 +639,7 @@ fi</string>
 				<key>title</key>
 				<string></string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 				<key>withspace</key>
 				<false/>
 			</dict>
@@ -660,15 +656,15 @@ fi</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string></string>
+				<string>./py3.sh purge.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>purge.py</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -840,15 +836,15 @@ fi</string>
 				<key>concurrently</key>
 				<false/>
 				<key>escaping</key>
-				<integer>0</integer>
+				<integer>102</integer>
 				<key>script</key>
-				<string></string>
+				<string>./py3.sh list_manager.py "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
 				<string>list_manager.py</string>
 				<key>type</key>
-				<integer>8</integer>
+				<integer>5</integer>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.action.script</string>
@@ -861,7 +857,7 @@ fi</string>
 			<key>config</key>
 			<dict>
 				<key>acceptsmulti</key>
-				<false/>
+				<integer>0</integer>
 				<key>filetypes</key>
 				<array>
 					<string>public.folder</string>
@@ -1068,7 +1064,7 @@ Leave empty to search over all filetypes</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>4.1.0</string>
+	<string>4.2.0</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>

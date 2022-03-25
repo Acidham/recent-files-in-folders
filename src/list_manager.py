@@ -1,10 +1,10 @@
-#!/usr/bin/python
+#!/usr/bin/env python3
 
 import json
 import os
 import sys
 
-from Alfred import Tools
+from Alfred3 import Tools
 
 wf_data_dir = Tools.getDataDir()
 config_file = os.path.join(wf_data_dir, 'folders.json')
