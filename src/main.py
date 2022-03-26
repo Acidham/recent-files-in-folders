@@ -144,7 +144,8 @@ class RecentFiles:
         """
         seq = list()
         for d in dict_list:
-            if d['filename'].lower().startswith(query.lower()):
+            # if d['filename'].lower().startswith(query.lower()):
+            if query.lower() in d['filename'].lower():
                 seq.append(d)
         return seq
 

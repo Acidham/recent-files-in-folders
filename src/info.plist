@@ -1064,7 +1064,7 @@ Leave empty to search over all filetypes</string>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>4.2.0</string>
+	<string>4.2.1</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
