@@ -11,7 +11,9 @@ Alfred Workflow to list recent files in folders, newest on top.
 
 1. After the workflow was installed you need to add folders first:
    1. Search for a folder via Alfred
-   2. Press `Tab` to enter file action
+   2. Press `TAB` to enter file action
+      1. The `TAB` shortcut is maybe configured differently under
+          `Alfred Preferences` → `Features` → `Universal Action` → `Show Actions`
    3. Search for `Add Folder to Recent Folders` and execute
 2. Type `rc` to start Recent Folders Workflow and subsequently the folders will be listed
 3. Press `CMD` to enter addtional actions:
