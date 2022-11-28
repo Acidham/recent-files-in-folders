@@ -356,6 +356,8 @@
 		<dict>
 			<key>config</key>
 			<dict>
+				<key>availableviaurlhandler</key>
+				<false/>
 				<key>triggerid</key>
 				<string>*rc</string>
 			</dict>
@@ -437,6 +439,8 @@
 				</array>
 				<key>elselabel</key>
 				<string>else</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -730,6 +734,8 @@ fi</string>
 				</array>
 				<key>elselabel</key>
 				<string>DELETE</string>
+				<key>hideelse</key>
+				<false/>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.utility.conditional</string>
@@ -780,6 +786,10 @@ fi</string>
 			<dict>
 				<key>delimiter</key>
 				<string>|</string>
+				<key>discardemptyarguments</key>
+				<false/>
+				<key>outputas</key>
+				<integer>0</integer>
 				<key>trimarguments</key>
 				<true/>
 				<key>variableprefix</key>
@@ -875,39 +885,67 @@ fi</string>
 		</dict>
 	</array>
 	<key>readme</key>
-	<string>https://github.com/Acidham/recent-files-in-folders
+	<string># Recent Files In Folders
+https://github.com/Acidham/recent-files-in-folders
 
-search_subfolders:
-True = Search for files including Subfolders
-False = Search files in Recent Folder
+Alfred Workflow to list recent files in folders, newest on top.
 
-ext_comma_sep: 
-Comma separated list of file extensions to search for e.g. jpg,png,pdf
-Leave empty to search over all filetypes</string>
+## NOTE
+
+**With version 4.0 the configuration was integrated in the Workflow from List Filter. After the upgrade it is required to setup the Folder from scratch!**
+**Please ensure to write down (or Screenshot) your current configuration.**
+
+## Requires 
+
+* Alfred 5 with Powerpack
+* Python 3
+
+## Usage
+
+1. After the workflow was installed you need to add folders first:
+   1. Search for a folder via Alfred
+   2. Press `TAB` to enter file action
+      1. The `TAB` shortcut is maybe configured differently under:     
+          `Alfred Preferences` → `Features` → `Universal Action` → `Show Actions`
+   3. Search for `Add Folder to Recent Folders` and execute
+2. Type `rc` to start Recent Folders Workflow and subsequently the folders will be listed
+3. Press `CMD` to enter addtional actions:
+   1. Back to list of folders
+   2. Purge Directory to delete all files and folders
+   3. Delete folder from configuration
+4. Press `ENTER` to open the underlying file
+5. Press `CMD` to reveal in Finder
+6. Press `Tab` to enter File action on selected file
+
+## User Configuration
+
+* A Custom string format can be set see cheat sheet: http://strftime.org/
+* Search in Subfolders:  Subfolders in the directory will be searched as well. If not set Subfolders will be ignored.
+* To restrict search to certain filetypes add a comma separated list of extensions e.g. `jpg,png` will only search for jpg and png files.</string>
 	<key>uidata</key>
 	<dict>
 		<key>036D93A8-AB80-4DE7-9890-D04B3B788856</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1310</integer>
+			<real>1310</real>
 			<key>ypos</key>
-			<integer>620</integer>
+			<real>620</real>
 		</dict>
 		<key>0BFD10F8-6F17-4B25-B2F3-792E9DF2EF67</key>
 		<dict>
 			<key>xpos</key>
-			<integer>525</integer>
+			<real>525</real>
 			<key>ypos</key>
-			<integer>650</integer>
+			<real>650</real>
 		</dict>
 		<key>1F71C1FB-CF5D-4842-86E1-64BF110B74AC</key>
 		<dict>
 			<key>note</key>
 			<string>List Directories from configuration</string>
 			<key>xpos</key>
-			<integer>220</integer>
+			<real>220</real>
 			<key>ypos</key>
-			<integer>105</integer>
+			<real>105</real>
 		</dict>
 		<key>1F941EBB-B459-4BFF-8688-97EF827EDC40</key>
 		<dict>
@@ -916,62 +954,62 @@ Leave empty to search over all filetypes</string>
 			<key>note</key>
 			<string>OneUpdater</string>
 			<key>xpos</key>
-			<integer>590</integer>
+			<real>590</real>
 			<key>ypos</key>
-			<integer>370</integer>
+			<real>395</real>
 		</dict>
 		<key>260F3E19-C40B-4B29-AA96-82B0C2FC36D4</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<real>1085</real>
 			<key>ypos</key>
-			<integer>340</integer>
+			<real>340</real>
 		</dict>
 		<key>37819932-6353-4D02-89B3-824820362956</key>
 		<dict>
 			<key>xpos</key>
-			<integer>525</integer>
+			<real>525</real>
 			<key>ypos</key>
-			<integer>135</integer>
+			<real>135</real>
 		</dict>
 		<key>38F95E2B-A72E-404C-B64E-B8C606E332F5</key>
 		<dict>
 			<key>xpos</key>
-			<integer>770</integer>
+			<real>770</real>
 			<key>ypos</key>
-			<integer>650</integer>
+			<real>650</real>
 		</dict>
 		<key>453C04B5-A677-4401-A8C4-A6888ED6695D</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1310</integer>
+			<real>1310</real>
 			<key>ypos</key>
-			<integer>100</integer>
+			<real>100</real>
 		</dict>
 		<key>45C05729-8442-463A-8725-C49A11EC4AF5</key>
 		<dict>
 			<key>note</key>
 			<string>Edit/Delete Entry</string>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<real>1085</real>
 			<key>ypos</key>
-			<integer>780</integer>
+			<real>780</real>
 		</dict>
 		<key>599D8C67-C857-4846-ACA8-EAA8561F8C57</key>
 		<dict>
 			<key>xpos</key>
-			<integer>850</integer>
+			<real>850</real>
 			<key>ypos</key>
-			<integer>625</integer>
+			<real>625</real>
 		</dict>
 		<key>6DE34E8D-EED5-43C5-855E-017EF2D0E2A0</key>
 		<dict>
 			<key>note</key>
 			<string>List folder entries</string>
 			<key>xpos</key>
-			<integer>590</integer>
+			<real>590</real>
 			<key>ypos</key>
-			<integer>105</integer>
+			<real>105</real>
 		</dict>
 		<key>6F4F6207-260D-4549-BD57-656FE8F83A92</key>
 		<dict>
@@ -980,91 +1018,146 @@ Leave empty to search over all filetypes</string>
 1. Purge 
 2. Delete Entry</string>
 			<key>xpos</key>
-			<integer>590</integer>
+			<real>590</real>
 			<key>ypos</key>
-			<integer>620</integer>
+			<real>620</real>
 		</dict>
 		<key>802129CB-E9C7-4E2F-9C6B-88B2B9534A99</key>
 		<dict>
 			<key>xpos</key>
-			<integer>10</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>105</integer>
+			<real>105</real>
 		</dict>
 		<key>A63455C1-BD98-4E59-A382-6824795C4A56</key>
 		<dict>
 			<key>note</key>
 			<string>Purge Folder Action</string>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<real>1085</real>
 			<key>ypos</key>
-			<integer>620</integer>
+			<real>620</real>
 		</dict>
 		<key>A74534B6-0DB6-424E-AA7C-556A35206EF0</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<real>1085</real>
 			<key>ypos</key>
-			<integer>220</integer>
+			<real>220</real>
 		</dict>
 		<key>A8B78260-5716-406D-8CF8-C79829069297</key>
 		<dict>
 			<key>xpos</key>
-			<integer>925</integer>
+			<real>925</real>
 			<key>ypos</key>
-			<integer>130</integer>
+			<real>130</real>
 		</dict>
 		<key>AA6FDC26-BD88-4520-81EE-3A7C9C527CDC</key>
 		<dict>
 			<key>note</key>
 			<string>File Action to add to config</string>
 			<key>xpos</key>
-			<integer>15</integer>
+			<real>30</real>
 			<key>ypos</key>
-			<integer>780</integer>
+			<real>780</real>
 		</dict>
 		<key>B542D53B-E276-46CD-B6F3-358D5B45DE8C</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1085</integer>
+			<real>1085</real>
 			<key>ypos</key>
-			<integer>475</integer>
+			<real>475</real>
 		</dict>
 		<key>C5BEE472-6561-4A1D-8C91-2B19044D889B</key>
 		<dict>
 			<key>xpos</key>
-			<integer>1310</integer>
+			<real>1310</real>
 			<key>ypos</key>
-			<integer>780</integer>
+			<real>780</real>
 		</dict>
 		<key>C6FC6DEA-30CE-442F-995F-2AE1A6937417</key>
 		<dict>
 			<key>xpos</key>
-			<integer>980</integer>
+			<real>980</real>
 			<key>ypos</key>
-			<integer>650</integer>
+			<real>650</real>
 		</dict>
 		<key>DFE321CC-443D-4A96-866A-952300D0EC5E</key>
 		<dict>
 			<key>xpos</key>
-			<integer>980</integer>
+			<real>980</real>
 			<key>ypos</key>
-			<integer>760</integer>
+			<real>760</real>
 		</dict>
 	</dict>
-	<key>variables</key>
-	<dict>
-		<key>date_format</key>
-		<string>%d.%m.%Y</string>
-		<key>ext_comma_sep</key>
-		<string></string>
-		<key>search_subfolders</key>
-		<string>True</string>
-	</dict>
+	<key>userconfigurationconfig</key>
+	<array>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string>%d.%m.%Y</string>
+				<key>placeholder</key>
+				<string>%d.%m.%Y</string>
+				<key>required</key>
+				<true/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string>Date Format</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>date_format</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<string></string>
+				<key>placeholder</key>
+				<string>png,jpg</string>
+				<key>required</key>
+				<false/>
+				<key>trim</key>
+				<true/>
+			</dict>
+			<key>description</key>
+			<string>Comma separated list of file extensions to search for e.g. jpg,png,pdf. Leave empty to search over all filetypes</string>
+			<key>label</key>
+			<string>File Extensions</string>
+			<key>type</key>
+			<string>textfield</string>
+			<key>variable</key>
+			<string>ext_comma_sep</string>
+		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>default</key>
+				<true/>
+				<key>required</key>
+				<false/>
+				<key>text</key>
+				<string>Search for files including Subfolders</string>
+			</dict>
+			<key>description</key>
+			<string></string>
+			<key>label</key>
+			<string></string>
+			<key>type</key>
+			<string>checkbox</string>
+			<key>variable</key>
+			<string>search_subfolders</string>
+		</dict>
+	</array>
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>4.2.1</string>
+	<string>4.2.2</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>

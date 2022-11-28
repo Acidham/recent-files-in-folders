@@ -7,6 +7,11 @@ Alfred Workflow to list recent files in folders, newest on top.
 **With version 4.0 the configuration was integrated in the Workflow from List Filter. After the upgrade it is required to setup the Folder from scratch!**
 **Please ensure to write down (or Screenshot) your current configuration.**
 
+## Requires 
+
+* Alfred 5 with Powerpack
+* Python 3
+
 ## Usage
 
 1. After the workflow was installed you need to add folders first:
@@ -24,11 +29,11 @@ Alfred Workflow to list recent files in folders, newest on top.
 5. Press `CMD` to reveal in Finder
 6. Press `Tab` to enter File action on selected file
 
-## Advance Configuration
+## User Configuration
 
-* A Custom string format can be set in *date_format* workflow value (Format cheat sheet: http://strftime.org/)
-* If `search_subfolders` is set to `True` the subfolders in the directory will be read as well. If set to `False` Subfolders will be ignored.
-* To restrict search to certain filetypes add a comma separated list of extensions to `ext_comma_sep` e.g. `jpg,png` will only search for jpg and png files. 
+* A Custom string format can be set see cheat sheet: http://strftime.org/
+* Search in Subfolders:  Subfolders in the directory will be searched as well. If not set Subfolders will be ignored.
+* To restrict search to certain filetypes add a comma separated list of extensions e.g. `jpg,png` will only search for jpg and png files. 
 
 ## Screenshot
 
