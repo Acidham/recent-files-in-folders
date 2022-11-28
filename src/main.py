@@ -63,7 +63,7 @@ class RecentFiles:
                 for name in files:
                     f_path = os.path.join(root, name)
                     f = os.path.basename(f_path)
-                    if os.path.isfile(f_path) and not(f.startswith('.') or f.endswith('\r')):
+                    if os.path.isfile(f_path) and not (f.startswith('.') or f.endswith('\r')):
                         f_ext = self._getExt(name)
                         file_stats = os.stat(f_path)
                         f_time = file_stats.st_birthtime
@@ -152,7 +152,7 @@ class RecentFiles:
 
 # Load Env, Argv and set working path
 t_dir = Tools.getEnv('directory')
-search_subfolders = True if Tools.getEnv('search_subfolders') == "True" else False
+search_subfolders = True if Tools.getEnvBool('search_subfolders') else False
 working_path = t_dir
 query = Tools.getArgv(1)
 date_format = Tools.getEnv('date_format')

@@ -1157,7 +1157,7 @@ Alfred Workflow to list recent files in folders, newest on top.
 	<key>variablesdontexport</key>
 	<array/>
 	<key>version</key>
-	<string>4.2.2</string>
+	<string>4.2.3</string>
 	<key>webaddress</key>
 	<string>https://github.com/Acidham/recent-files-in-folders</string>
 </dict>
